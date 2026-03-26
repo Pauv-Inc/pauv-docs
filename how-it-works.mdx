@@ -1,0 +1,102 @@
+---
+title: How It Works
+description: "Understand the Pauv platform, PVs, USDP, and the pricing model."
+---
+
+## Overview
+
+Pauv is a **closed-loop digital marketplace** where users can speculate on the public sentiment of real people — Talent — by buying and selling digital collectibles called **PVs (Personal Value units)**.
+
+All transactions on Pauv happen through an internal credit called **USDP**. You deposit USD, receive USDP, use USDP to trade PVs, and can withdraw your USDP back to USD at any time.
+
+## The Closed-Loop Ecosystem
+
+Pauv operates as a fully closed system. This is a core design principle that ensures security, compliance, and simplicity:
+
+<CardGroup cols={2}>
+  <Card title="No P2P Transfers" icon="ban">
+    Users cannot send USDP or PVs to other users, wallets, or platforms.
+  </Card>
+  <Card title="No Secondary Markets" icon="shield-halved">
+    All PV trades execute directly against Pauv's algorithmic pricing curve.
+  </Card>
+  <Card title="No External Portability" icon="lock">
+    USDP and PVs cannot leave the Pauv platform.
+  </Card>
+  <Card title="Closed-Loop Fiat" icon="building-columns">
+    USD enters via regulated processors and can only be withdrawn back to your verified bank account.
+  </Card>
+</CardGroup>
+
+## How Funds Flow
+
+<Steps>
+  <Step title="Deposit USD">
+    You deposit USD from your bank account via ACH or card. Your funds pass through our payment processors (Finix) and security gateway (Soap Payments) with full KYC verification, geofencing, and fraud prevention.
+  </Step>
+  <Step title="Funds Held in Custody">
+    Your USD is held securely in a **For Benefit Of (FBO)** custodial account at Lead Bank via BVNK. Pauv never commingles user funds with company operating funds.
+  </Step>
+  <Step title="Receive USDP">
+    Your Pauv account is credited with USDP at a 1:1 ratio ($1 = 1 USDP). USDP is the internal currency you use to trade.
+  </Step>
+  <Step title="Trade PVs">
+    Use your USDP to buy PVs on the Talent Exchange. When you're ready, sell PVs back for USDP at the current algorithmic price.
+  </Step>
+  <Step title="Withdraw">
+    Convert your USDP back to USD and withdraw to your linked bank account. Withdrawals typically take 1–2 business days for ledger-to-blockchain reconciliation.
+  </Step>
+</Steps>
+
+## The Linear Pricing Model
+
+Every PV on Pauv uses the same transparent, continuous linear growth formula:
+
+| Parameter | Value |
+|-----------|-------|
+| **Starting price** | $0.01 |
+| **Price change per PV** | $0.000001 per unit bought or sold |
+| **Formula** | Identical for all Talents |
+
+- When users **buy** PVs, the price increases.
+- When users **sell** PVs, the price decreases.
+
+This model ensures:
+- **Constant liquidity** — There is always a price to buy or sell at.
+- **Predictable pricing** — The formula is fully transparent and visible to all users.
+- **No market manipulation** — Prices are set algorithmically, not by hidden order books.
+
+## Transaction Fees
+
+A total **0.50% fee** is applied to every buy or sell order:
+
+| Recipient | Fee |
+|-----------|-----|
+| **Talent** | 0.25% of each transaction |
+| **Pauv** | 0.25% of each transaction |
+
+## What PVs Are (and Aren't)
+
+<AccordionGroup>
+  <Accordion title="PVs ARE digital collectibles">
+    PVs are speculative, sentiment-based digital collectibles — similar to trading cards. Their value fluctuates based on market demand and public perception of the Talent.
+  </Accordion>
+  <Accordion title="PVs are NOT equity or stock">
+    PVs do not represent ownership in a person, company, or enterprise. They confer no voting rights, income rights, or managerial authority.
+  </Accordion>
+  <Accordion title="PVs are NOT cryptocurrency">
+    PVs are tracked on a private, hybrid ledger. They cannot be transferred to external wallets, used on public blockchains, or mined.
+  </Accordion>
+  <Accordion title="PVs are NOT redeemable for services">
+    Owning someone's PVs does not entitle you to anything from that Talent — no services, performances, or special treatment.
+  </Accordion>
+</AccordionGroup>
+
+## Hybrid Ledger Architecture
+
+Pauv uses a dual-layer system for maximum security and auditability:
+
+- **Private Blockchain** — Records immutable, tamper-proof audit trails of all critical financial events (wallet creation, trades, deposits, withdrawals).
+- **PostgreSQL Database** — Handles real-time pricing, order execution, user balances, and platform analytics.
+
+This hybrid approach gives Pauv the speed of a modern trading platform with the auditability and data integrity of blockchain technology.

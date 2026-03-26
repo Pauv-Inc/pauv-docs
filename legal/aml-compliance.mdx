@@ -1,0 +1,82 @@
+---
+title: AML & BSA Compliance
+description: "Pauv's Anti-Money Laundering and Bank Secrecy Act compliance program."
+---
+
+Pauv Inc. maintains a comprehensive Anti-Money Laundering (AML) and Bank Secrecy Act (BSA) compliance program designed to prevent the platform from being used to facilitate money laundering or the financing of terrorist activities.
+
+## Closed-Loop Risk Mitigation
+
+Pauv's closed-loop ecosystem fundamentally eliminates standard avenues for money laundering and fraud:
+
+- **No Peer-to-Peer Transfers** — Users cannot send, gift, or trade USDP or PVs to other users
+- **No Secondary Markets** — All PV trades execute directly against Pauv's automated pricing curve
+- **No External Portability** — USDP and PVs cannot be transferred to external wallets or platforms
+- **Closed-Loop Fiat** — Fiat enters via regulated processors and can only be withdrawn back to the verified user's linked bank account
+
+## Identity Verification (KYC)
+
+Pauv enforces strict Customer Due Diligence (CDD) through our compliance partner **Soap Payments**, powered by Plaid IDV and Monitor.
+
+### Tier 1: Standard KYC
+
+Required before depositing funds or creating a Talent profile:
+
+- Data source verification (name, DOB, address, ID number) against authoritative databases
+- SMS verification of your mobile device
+- Real-time AML screening against global watchlists
+
+### Tier 2: Step-Up KYC
+
+Required for higher-risk activities — includes document verification (government-issued photo ID) and selfie liveness check:
+
+- **Talent withdrawals** — Required before any USD can be withdrawn to a bank account
+- **Elevated risk signals** — Triggered automatically when the risk engine detects device anomalies, synthetic identity risk, or low Trust Index scores
+
+## OFAC Screening
+
+Pauv is strictly prohibited from conducting business with individuals, entities, or countries sanctioned by the **Office of Foreign Assets Control (OFAC)**.
+
+- Every user is automatically screened against the OFAC SDN list and global PEP lists
+- Screening is **continuous** — Pauv's user database is scrubbed against daily watchlist updates
+- If a match is flagged, the account is immediately blocked, balances frozen, and deposit/withdrawal capabilities disabled
+- Required blocking reports are filed with the U.S. Treasury/OFAC within 10 business days
+
+## Geofencing
+
+Pauv is authorized to operate across the United States through BVNK's Money Transmitter Licenses. The platform is **strictly prohibited to international users**:
+
+- All non-US IP addresses are actively blocked
+- Account creation is restricted to US-based devices
+
+## Transaction Monitoring
+
+Pauv monitors for suspicious activity patterns including:
+
+- Structuring deposits just under reporting thresholds
+- Large fiat deposits followed by immediate withdrawal requests without trading activity
+- Rapid deposit-and-withdrawal cycles
+- Other red flags specific to the closed-loop model
+
+Suspicious Activity Reports (SARs) are filed with FinCEN when warranted.
+
+## Record Keeping
+
+| Record Type | Retention Period |
+|-------------|-----------------|
+| KYC/CIP data (names, addresses, DOBs, SSNs, document images) | 5 years after account closure |
+| Transaction logs (deposits, withdrawals, PV trades) | 5 years minimum |
+| Security | AES-256 encryption, role-based access controls |
+
+All transactions are recorded on Pauv's dual-layer hybrid architecture (PostgreSQL + private blockchain), ensuring an immutable, time-stamped, tamper-proof audit trail.
+
+## MSB Registration
+
+Pauv Inc. is a registered **Money Services Business (MSB)** with FinCEN, maintaining a full BSA/AML compliance program including:
+
+- Customer Identification Program (CIP) and Customer Due Diligence (CDD)
+- Enhanced Due Diligence (EDD) for higher-risk users
+- OFAC and sanctions screening
+- Transaction monitoring and SAR/CTR procedures
+- Employee training on AML/BSA requirements
+- Independent testing of AML program and internal controls

@@ -18,7 +18,7 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
+    "name": "Go to Pauv",
     "url": "https://pauv.com"
   },
   "navigation": [
@@ -26,7 +26,32 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "quickstart"
+        "how-it-works",
+        "getting-started"
+      ]
+    },
+    {
+      "group": "Platform",
+      "pages": [
+        "platform/usdp-and-funds",
+        "platform/trading-pvs",
+        "platform/for-talent"
+      ]
+    },
+    {
+      "group": "Legal",
+      "pages": [
+        "legal/terms-of-service",
+        "legal/privacy-policy",
+        "legal/refund-policy",
+        "legal/aml-compliance",
+        "legal/regulatory-framework"
+      ]
+    },
+    {
+      "group": "Support",
+      "pages": [
+        "support"
       ]
     }
   ],
