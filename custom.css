@@ -1,7 +1,13 @@
-.navbar-cta,
-[class*="navbar"] a[class*="cta"],
-[class*="navbar"] button,
+/* Force black text on the Go to Pauv CTA button */
+header a[href="https://pauv.com"],
+header a[href="https://pauv.com"] *,
 nav a[href="https://pauv.com"],
-.mint-navbar-cta {
+nav a[href="https://pauv.com"] *,
+a[href="https://pauv.com"][class*="button"],
+a[href="https://pauv.com"][class*="cta"],
+a[href="https://pauv.com"][class*="Button"],
+a[href="https://pauv.com"] span,
+[data-testid*="cta"],
+[data-testid*="cta"] * {
   color: #000000 !important;
 }
