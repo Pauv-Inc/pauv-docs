@@ -65,5 +65,8 @@
     "socials": {
       "github": "https://github.com/lordacidity/pauv-docs"
     }
+  },
+  "appearance": {
+    "default": "dark"
   }
 }
