@@ -1,60 +1,70 @@
 ---
-title: Points & Funds
-description: "How deposits, points, and withdrawals work on Pauv."
+title: Funds
+description: "How deposits, your on-platform balance, and withdrawals work on Pauv."
 ---
 
-## What Are Points?
+<Note>
+  **Beta.** While we ensure the stability of our trading engine, every withdrawal request is reviewed manually and approved (or denied for a genuine error) within 12 hours.
+</Note>
 
-**Points** are Pauv's internal, dollar-denominated ledger balance. You use points to open forecasts on the platform.
+## Your On-Platform Balance
+
+Your **balance** is the dollar-denominated number you see in the app. It tracks the value you have available to open forecasts.
 
 | Property | Detail |
 |----------|--------|
-| **Exchange rate** | 1 point = $1 USD (always) |
-| **Transferable?** | No, points cannot be sent to other users, platforms, or wallets |
-| **Cryptocurrency?** | No, points are an internal ledger entry, not a blockchain token |
-| **External value?** | None, points have no value outside of pauv.com |
+| **Display** | Dollars ($). 1 USDC deposited = $1 of on-platform balance |
+| **Funded by** | USDC on Solana, sent from your connected wallet |
+| **Transferable to other users?** | No |
+| **Withdrawable to your wallet?** | Yes, in USDC on Solana |
 
-Think of points like casino chips: you exchange real dollars for them to use inside the platform, and you can exchange them back at any time.
+## Connecting Your Wallet
 
-## Depositing Funds
+Pauv runs on **Solana**. To deposit or withdraw, connect a Solana wallet to your account:
 
-When you deposit USD into Pauv:
+- **Browser extension** — Phantom, Solflare, Backpack, or any other Solana-compatible wallet.
+- **Mobile** — scan the QR code displayed in the app from your mobile wallet.
 
-1. Your funds are processed through **Finix** (ACH/card processor) and **Soap Payments** (security gateway).
-2. Your USD is deposited into a **regulated For Benefit Of (FBO) custodial account** at a regulated U.S. partner bank.
-3. Your Pauv account is credited one-for-one in points.
+Your wallet address is the address Pauv will send your withdrawals to. Make sure the wallet you connect is one you control.
 
-<Warning>
-  Pauv **never** commingles user funds with corporate operating funds. Your dollars are held separately in regulated custodial accounts at all times.
-</Warning>
+## Depositing
 
-## Using Points
+<Steps>
+  <Step title="Open the deposit screen">
+    From your account, choose **Deposit**. The app will display your Pauv deposit address.
+  </Step>
+  <Step title="Send USDC on Solana">
+    From your connected wallet, send **USDC on Solana** to that address. Only USDC on Solana is supported — sending any other token, or USDC on a different network, may result in loss of funds.
+  </Step>
+  <Step title="Balance credited">
+    Once the deposit is confirmed on-chain, your on-platform balance is credited dollar-for-dollar.
+  </Step>
+</Steps>
 
-All forecasting on Pauv happens in points:
+## Using Your Balance
 
-- **Open a forecast**: Commit points to a public figure's NPSI as a Positive Forecast (long) or Negative Forecast (escrow-backed short).
-- **Close a forecast**: Receive points back at the current curve value.
-- **Instant settlement**: Because points are an internal ledger entry, forecasts open and close instantly without waiting for external payment rails.
+All forecasting on Pauv happens against your on-platform balance:
 
-## Withdrawing Funds
+- **Open a forecast.** Commit a dollar amount to a public figure's NPSI as a Positive Forecast (long) or Negative Forecast (escrow-backed short).
+- **Close a forecast.** The curve calculates your proceeds and credits them back to your balance instantly.
+- **Instant settlement.** Because your balance is an on-platform record, forecasts open and close immediately without waiting on the chain.
 
-You can convert your points back to USD and withdraw at any time:
+## Withdrawing
 
-1. Initiate a withdrawal request through the platform.
-2. Pauv performs a standard ledger reconciliation to verify your account history and balance.
-3. Funds are remitted to your **linked bank account** within **1–2 business days**.
+You can withdraw your balance back to your connected wallet at any time.
+
+<Steps>
+  <Step title="Request a withdrawal">
+    From your account, choose **Withdraw** and enter the amount.
+  </Step>
+  <Step title="Manual review (beta)">
+    During the beta period, every withdrawal is reviewed by our team. Reviews complete within **12 hours**. The only reason a withdrawal would be denied is a genuine flaw or error — for example, the trading engine credited you more than it should have. If that happens, we will contact you to explain.
+  </Step>
+  <Step title="USDC sent to your wallet">
+    Once approved, USDC is sent to your connected Solana wallet.
+  </Step>
+</Steps>
 
 <Note>
-  Withdrawals go back to the same verified bank account you used to deposit. You cannot withdraw to a different account without updating your verification.
+  Withdrawals are sent only to the Solana wallet that is currently connected to your account. To withdraw to a different wallet, connect that wallet first.
 </Note>
-
-## Custody & Security
-
-- **FBO accounts**: All user funds are held in For Benefit Of custodial accounts at regulated U.S. depository institutions.
-- **No commingling**: User funds are never mixed with Pauv's operational accounts.
-- **Encryption**: All financial records are protected with AES-256 encryption in transit and at rest.
-- **Audit trail**: Every deposit, forecast, and withdrawal is recorded with tamper-resistant logging.
-
-## Interest on Custodial Funds
-
-Funds held in FBO custodial accounts earn interest while they sit on the platform. Per the [Terms of Service](/legal/terms-of-service), any interest or earnings on pooled custodial balances are the sole property of Pauv Inc. Users have no claim to these earnings. This is a secondary revenue stream that scales with total deposits on the platform.

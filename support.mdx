@@ -1,6 +1,6 @@
 ---
 title: Customer Support
-description: "How to get help with your Pauv account, forecasts, and disputes."
+description: "How to get help with your Pauv account, forecasts, and withdrawals."
 ---
 
 ## Contact Us
@@ -17,7 +17,8 @@ description: "How to get help with your Pauv account, forecasts, and disputes."
 |------|---------|
 | **Operating Hours** | Monday – Friday, 9:00 AM – 6:00 PM CST |
 | **Standard Response** | 24–48 business hours for general inquiries |
-| **Priority Escalation** | Within 12 business hours for payment and fraud issues |
+| **Withdrawal Review (beta)** | Within 12 hours of request, 7 days a week |
+| **Priority Escalation** | Within 12 business hours for security and fraud issues |
 
 ## Priority Escalations
 
@@ -25,27 +26,32 @@ Inquiries related to the following are treated as **Priority Escalations** and t
 
 - Unauthorized account access or suspected fraud
 - Account lockouts
-- Deposit or withdrawal failures
+- Deposit not credited after on-chain confirmation
+- Withdrawal review questions
 - Account security concerns
 
 ## Reporting Fraud or Unauthorized Access
 
-If you suspect unauthorized access to your account or an unauthorized transaction:
+If you suspect unauthorized access to your **Pauv account**:
 
 <Steps>
   <Step title="Email support immediately">
     Send an email to **support@pauv.com** with **"URGENT: ACCOUNT SECURITY"** or **"URGENT: FRAUD"** in the subject line.
   </Step>
   <Step title="Account freeze">
-    Upon receipt, your account and point balance will be **temporarily frozen** to prevent unauthorized activity.
+    Upon receipt, your account and on-platform balance will be **temporarily frozen** to prevent unauthorized activity.
   </Step>
   <Step title="Deposit & withdrawal suspension">
     All deposit and withdrawal capabilities for the affected account are suspended during investigation.
   </Step>
-  <Step title="Identity verification">
-    Our team will verify your identity using our KYC records before proceeding with remediation, refunds, or chargeback investigations.
+  <Step title="Account recovery">
+    Our team will work with you to secure your account and resume normal access.
   </Step>
 </Steps>
+
+<Warning>
+  Pauv cannot recover funds lost due to a compromised wallet. Protect your wallet's recovery phrase the way you would protect the keys to your bank account.
+</Warning>
 
 ## Self-Service Resources
 
@@ -53,10 +59,10 @@ Before contacting support, check if your question is answered in our documentati
 
 <CardGroup cols={2}>
   <Card title="How It Works" icon="circle-info" href="/how-it-works">
-    The NPSI, forecasts, and DTM 4.0
+    The NPSI, forecasts, and DTM 4.1
   </Card>
-  <Card title="Points & Funds" icon="wallet" href="/platform/points">
-    Deposits, withdrawals, and custody details
+  <Card title="Funds" icon="wallet" href="/platform/points">
+    Deposits, on-platform balance, and withdrawals
   </Card>
   <Card title="Forecasting" icon="arrow-trend-up" href="/platform/forecasting">
     How to open and close forecasts
@@ -70,21 +76,24 @@ Before contacting support, check if your question is answered in our documentati
 
 <AccordionGroup>
   <Accordion title="How long do withdrawals take?">
-    Withdrawals typically take **1–2 business days** for standard ledger reconciliation before funds are remitted to your linked bank account.
+    During the beta period, every withdrawal request is reviewed by our team and approved within **12 hours**. The only reason a withdrawal would be denied is a genuine flaw or error — for example, the trading engine credited you more than it should have. Once approved, USDC is sent to your connected Solana wallet on-chain.
   </Accordion>
-  <Accordion title="Why was I asked for additional verification?">
-    If our risk engine detects elevated risk signals, or if you're a public figure claiming your NPSI profile to direct your good-faith royalty, you may be asked to complete **Step-Up KYC** (government photo ID + selfie liveness check). This protects your account and ensures regulatory compliance.
+  <Accordion title="Why was my withdrawal denied?">
+    Withdrawals are only denied if our review finds a genuine flaw or error in how your balance was calculated. If that happens, we will contact you to explain what we found and how we will resolve it. This safeguard exists during beta while we ensure the stability of our trading engine.
   </Accordion>
-  <Accordion title="Can I transfer points or forecasts to someone else?">
-    No. Pauv is a closed-loop platform. Peer-to-peer transfers of points, internal tokens, or forecasts are not supported.
+  <Accordion title="My deposit hasn't shown up yet. What do I do?">
+    Confirm the transaction was sent as **USDC on Solana** to your Pauv deposit address. Once the deposit is confirmed on-chain, your balance is credited automatically. If you sent the wrong token or used a different network, contact support — recovery may not be possible.
+  </Accordion>
+  <Accordion title="Can I transfer my balance or forecasts to someone else?">
+    No. On-platform balances and positions are not transferable to other users. To move funds, withdraw to your own wallet.
   </Accordion>
   <Accordion title="What happens if the NPSI moves against my forecast?">
-    The NPSI is driven entirely by forecasting activity through DTM 4.0. If forecasting pushes the index against you, closing your forecast will return fewer points than you committed. A Negative Forecast can be automatically liquidated at zero return if the NPSI rises enough to consume 95% of its escrow. Pauv does not offer refunds for NPSI movement or liquidations. See our [Refund Policy](/legal/refund-policy).
-  </Accordion>
-  <Accordion title="How do I complete KYC verification?">
-    KYC is handled through our secure partner Soap Payments during account registration. You'll need to provide your name, date of birth, address, and ID number. See [Getting Started](/getting-started) for details.
+    The NPSI is driven entirely by forecasting activity through DTM 4.1. If forecasting pushes the index against you, closing your forecast will return less than you committed. A Negative Forecast can be automatically liquidated at zero return if the NPSI rises enough to consume its liquidation threshold of the escrow. Pauv does not offer refunds for NPSI movement or liquidations. See our [Refund Policy](/legal/refund-policy).
   </Accordion>
   <Accordion title="I'm a public figure. How do I claim my NPSI profile?">
-    Visit your NPSI profile on pauv.com and select **Claim Your Profile**. You'll complete identity verification (Step-Up KYC) and choose whether to direct your good-faith royalty to a verified bank account or a verified 501(c)(3) charity. See [For Public Figures](/platform/for-talent).
+    Visit your NPSI profile on pauv.com and select **Claim Your Profile**. Our team will verify your identity and you can choose to direct your good-faith royalty to a verified Solana wallet (paid in USDC) or to a verified 501(c)(3) charity. See [For Public Figures](/platform/for-talent).
+  </Accordion>
+  <Accordion title="How do I get a public figure listed?">
+    Anyone can submit a public figure to be listed, and public figures (or their authorized representatives) can request their own listing. Either way, Pauv reviews and approves before the profile goes live. See [For Public Figures](/platform/for-talent).
   </Accordion>
 </AccordionGroup>

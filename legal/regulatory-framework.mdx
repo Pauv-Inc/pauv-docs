@@ -3,7 +3,7 @@ title: Regulatory Framework
 description: "How Pauv's Platform and the NPSI are classified under federal and state law."
 ---
 
-This page summarizes Pauv's regulatory classification at a high level. Pauv operates consistent with applicable federal and state law, supported by legal opinions from qualified outside counsel.
+This page summarizes Pauv's regulatory posture at a high level. Pauv operates consistent with applicable federal and state law, supported by legal opinions from qualified outside counsel.
 
 ## Public Sentiment Is Public Domain
 
@@ -23,7 +23,7 @@ Forecasts opened on an NPSI have been analyzed under the **Howey test** (the sta
 
 ### Key Factors
 
-- **No common enterprise.** Each NPSI is priced by a deterministic, published algorithm (DTM 4.0, a single-curve softplus bonding model). The mathematical rigidity of the bonding curve removes any "common enterprise" element: the index value is a direct measurement of forecasting activity, not a product of centrally managed returns.
+- **No common enterprise.** Each NPSI is priced by a deterministic, published algorithm (DTM 4.1, a single-curve softplus bonding model). The mathematical rigidity of the bonding curve removes any "common enterprise" element: the index value is a direct measurement of forecasting activity, not a product of centrally managed returns.
 - **No managerial efforts.** The NPSI value is driven entirely by user forecasting activity. Pauv does not make managerial decisions that affect the value of any NPSI. Public figures have no role in setting, supporting, or promoting their NPSI value.
 - **No ownership or profit participation.** Users do not acquire equity, debt, voting rights, dividend rights, or any interest in a business venture or in any individual.
 - **Signal, not asset.** The NPSI is a measure of public perception, not something users "own" or "hold." Users open and close forecasts; they do not hold tradable assets.
@@ -38,7 +38,7 @@ Forecasts opened on an NPSI have been analyzed under the **Howey test** (the sta
 | Transferable off-platform | No | Varies | Yes |
 | Pricing method | Published bonding-curve algorithm | Event-conditional pricing | Market-driven with issuer performance |
 
-Publishing the DTM 4.0 algorithm is a deliberate strategic choice: the mathematical determinism of the pricing mechanism rebuts the "common enterprise" and "efforts of others" prongs of Howey.
+Publishing the DTM 4.1 algorithm is a deliberate strategic choice: the mathematical determinism of the pricing mechanism rebuts the "common enterprise" and "efforts of others" prongs of Howey.
 
 ## Not a Prediction Market
 
@@ -53,34 +53,21 @@ Pauv operates a new category called the **signal market**, distinct from both pr
 
 ## Not Subject to CFTC Registration
 
-Pauv's activity is limited to forecasts priced by a deterministic bonding curve using internal USD points. The Platform does not offer:
+Pauv's activity is limited to forecasts priced by a deterministic bonding curve using an internal USD-denominated balance funded by USDC on Solana. The Platform does not offer:
 
 - Futures, options, swaps, or perpetual contracts
 - Leveraged, margined, or financed forecasts
 - Derivatives of any kind
 
-Negative Forecasts under DTM 4.0 are not short sales of any security, commodity, or asset. No external instrument is borrowed or sold; the Negative Forecast is fully collateralized on-platform by an escrow funded entirely from the user's net stake and capital extracted from the same bonding curve. The automatic 95%-escrow liquidation is a deterministic closing rule implemented in the published algorithm, not a margin call or lender recall.
+Negative Forecasts under DTM 4.1 are not short sales of any security, commodity, or asset. No external instrument is borrowed or sold; the Negative Forecast is fully collateralized on-platform by an escrow funded entirely from the user's net stake and capital extracted from the same bonding curve. The automatic liquidation rule is a deterministic closing rule implemented in the published algorithm, not a margin call or lender recall.
 
 Therefore, CFTC registration requirements do not apply. The Platform's published pricing algorithm and closed-loop design further mitigate fraud and manipulation risks.
 
-## FinCEN: Money Services Business
-
-Pauv is registered with FinCEN as a **Money Services Business (MSB)** and maintains a full BSA/AML compliance program.
-
-**Points** are classified as **closed-loop stored value**: not a convertible virtual currency (CVC). Points:
-
-- Cannot be transferred between users
-- Cannot be sent to external wallets
-- Have no extrinsic monetary value
-- Function solely as an internal medium for forecasting
-
-Because Pauv's fiat-in / fiat-out model involves receiving and transmitting funds on behalf of users, the Platform operates as a registered money transmitter.
-
 ## Name, Image, and Likeness (NIL)
 
-All visual representations of public figures on Pauv are **AI-generated**. Literal photographs (agency-owned headshots or press images) are never used. This is a deliberate compliance choice.
+Imagery used on NPSI profiles is either **AI-generated** or sourced from **copyright-cleared / public-domain** materials. Agency-owned headshots, press images, and other rights-restricted imagery are never used. This is a deliberate compliance choice.
 
-Under the Transformative Use Test, courts have found that synthesized, non-literal depictions are protected "expressive works" rather than commercial appropriations of a person's likeness. Pauv's AI-generated imagery is a stylized representation used to identify an NPSI, itself a public-domain data product, and is not a commercial exploitation of any individual's identity.
+Under the Transformative Use Test, courts have found that synthesized, non-literal depictions are protected "expressive works" rather than commercial appropriations of a person's likeness. Pauv's imagery is used to identify an NPSI, itself a public-domain data product, and is not a commercial exploitation of any individual's identity.
 
 ## Lanham Act: Non-Endorsement
 
@@ -92,22 +79,13 @@ To prevent any "False Endorsement" claim under the Lanham Act, the Platform's us
 
 The required disclaimer reads:
 
-> *[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. All imagery is AI-generated. Forecasts reflect public sentiment, not the views of the person indexed.*
+> *[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. All imagery is either AI-generated or sourced from copyright-cleared materials. Forecasts reflect public sentiment, not the views of the person indexed.*
 
 ## Good-Faith Royalty (MLC Analogue)
 
 The 0.5% good-faith royalty set aside for public figures mirrors the **Mechanical Licensing Collective (MLC)** framework established by the Music Modernization Act. By setting aside royalties in a transparent, audited ledger, Pauv fulfills a duty of care that exceeds the standard for news organizations or fantasy-sports platforms.
 
-Unclaimed royalties are held for the state-mandated dormancy period (typically 3 to 5 years) and then remitted to the applicable State Controller's office under established **escheatment laws**. This structure is supported by precedent in *SEC v. DeSo / BitClout* dispositions, which have recognized the viability of claimable-profile models that use U.S. dollar rails, avoid misappropriation of escrow funds, and maintain transparent public ledgers.
-
-## State Licensing
-
-Pauv's fiat-in / fiat-out model triggers **money-transmitter licensing** in most U.S. states. Pauv is pursuing state-level licensure as required.
-
-At the state level, forecasts on an NPSI are **not considered securities** in any U.S. jurisdiction because they:
-
-- Lack ownership rights, dividend rights, or enterprise-related profit expectations
-- Derive value solely from public sentiment as measured by forecasting activity on a published algorithm
+Unclaimed royalties are held for the state-mandated dormancy period (typically 3 to 5 years) and then remitted to the applicable State Controller's office under established **escheatment laws**.
 
 ## Not a Securities Exchange, Broker-Dealer, or ATS
 
@@ -117,7 +95,7 @@ Because forecasts are not securities, Pauv does not operate as:
 - A broker or dealer
 - An alternative trading system (ATS)
 
-All forecasts are settled against DTM 4.0 within Pauv's own system. There is no user-to-user matching, no bid/ask spread, and no linkage to national market systems.
+All forecasts are settled against DTM 4.1 within Pauv's own system. There is no user-to-user matching, no bid/ask spread, and no linkage to national market systems.
 
 <Note>
   This summary is for informational purposes only and does not constitute legal advice.

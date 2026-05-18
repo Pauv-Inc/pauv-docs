@@ -1,15 +1,19 @@
 ---
 title: Refund Policy
-description: "Pauv Inc. Refund Policy - last updated April 2026."
+description: "Pauv Inc. Refund Policy - last updated May 2026."
 ---
 
-*Last Updated: April 17, 2026*
+*Last Updated: May 18, 2026*
 
 ## Withdrawals vs. Refunds
 
-Pauv is a **fully liquid, closed-loop platform**. Because you can close your forecasts against DTM 4.0 at any time and withdraw your point balance to your linked bank account, Pauv does not offer traditional "refunds" for Platform activity, NPSI-driven losses, or automatic liquidations of Negative Forecasts.
+Pauv is a **fully liquid, closed-loop platform**. Because you can close your forecasts against DTM 4.1 at any time and withdraw your on-platform balance to your connected Solana wallet, Pauv does not offer traditional "refunds" for Platform activity, NPSI-driven losses, or automatic liquidations of Negative Forecasts.
 
-If you wish to retrieve your funds, simply close your active forecasts to receive points and initiate a withdrawal through the Platform.
+If you wish to retrieve your funds, simply close your active forecasts to restore your balance and initiate a withdrawal through the Platform.
+
+<Note>
+  **Beta withdrawal review.** While we ensure the stability of our trading engine, every withdrawal request is reviewed manually and approved (or denied for a genuine error) within 12 hours. A denial only happens when our review finds a real flaw — for example, if the trading engine credited a balance amount it should not have. If a withdrawal is denied, we will contact you to explain and resolve it.
+</Note>
 
 ## No "Change of Mind" Refunds
 
@@ -17,37 +21,27 @@ We do **not** offer refunds or reversals for:
 
 - Changing your mind after opening a Positive or Negative Forecast
 - NPSI movements that result in a loss when you close your forecast
-- Automatic liquidation of a Negative Forecast when its buy-back cost reaches 95% of its escrow
+- Automatic liquidation of a Negative Forecast when its buy-back cost reaches the position's liquidation threshold
 - Fees paid on opening or closing a forecast
 - Dissatisfaction with Platform features
-- Standard withdrawal processing times (1–2 business days)
+- Standard withdrawal review timing (up to 12 hours during beta)
+- USDC sent in the wrong token, on a network other than Solana, or to an address other than your Pauv deposit address
+- Funds lost due to a compromised or misconfigured wallet
 
 ## Exceptions (Bona Fide Errors)
 
-Pauv Inc. may, at its sole discretion, process a direct refund to your payment method in the following specific scenarios:
+Pauv Inc. may, at its sole discretion, correct your on-platform balance or process a re-credit in the following specific scenarios:
 
 | Scenario | Description |
 |----------|-------------|
-| **Technical Duplication** | A technical error causes your payment method to be charged twice for a single deposit. |
-| **Unauthorized Activity** | We verify that a deposit was made due to fraudulent use of your credit card or bank account (subject to formal investigation). |
-| **Failure to Deliver** | You were charged but points were never delivered to your Pauv account due to a system failure. |
+| **Deposit Not Credited** | Your USDC deposit was confirmed on-chain to your Pauv deposit address but never credited to your balance due to a system failure. |
+| **Engine Error** | A bug in the trading engine resulted in your balance being calculated incorrectly. This may go in either direction: an under-credit is restored, and an over-credit is the basis for denying a related withdrawal during beta review. |
+| **Unauthorized Activity** | We verify that activity on your account was the result of unauthorized access to your Pauv account (subject to investigation). |
 
-## How to Request a Refund for an Error
+## How to Report an Error
 
-To request a refund for a Bona Fide Error, email **support@pauv.com** within **7 days** of the transaction. Include:
+To report a Bona Fide Error, email **support@pauv.com** within **7 days** of the transaction. Include:
 
-1. Your username
-2. Transaction ID and date
-3. Evidence of the error (e.g., screenshot of a double bank charge)
-
-## Chargebacks
-
-<Warning>
-  Initiating a chargeback with your bank or credit card issuer **without first contacting Pauv support** constitutes a violation of our [Terms of Service](/legal/terms-of-service).
-</Warning>
-
-Because points represent internal ledger balances and forecasts are settled instantly against DTM 4.0, unwarranted chargebacks are treated as **friendly fraud**. An unjustified chargeback will result in:
-
-- Immediate and permanent suspension of your Pauv account
-- Forfeiture of any open forecasts or point balance, subject to applicable law
-- Potential reporting of the incident to our payment partners
+1. Your account email
+2. The on-chain transaction signature (for deposit issues) or the affected forecast / position ID
+3. A clear description of what you expected vs. what happened

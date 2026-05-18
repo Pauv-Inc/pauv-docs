@@ -1,9 +1,9 @@
 ---
 title: Terms of Service
-description: "Pauv Inc. Terms of Service - last updated April 2026."
+description: "Pauv Inc. Terms of Service - last updated May 2026."
 ---
 
-*Last Updated: April 17, 2026*
+*Last Updated: May 18, 2026*
 
 <Warning>
   **IMPORTANT NOTICE:** These Terms contain a **binding arbitration provision** and **class action waiver**. Please read carefully.
@@ -15,7 +15,7 @@ By creating an account, accessing, or using pauv.com (the "Platform"), you agree
 
 ## 2. Eligibility
 
-- **General Users (Forecasters):** You must be at least 18 years old, a resident of the United States, and pass all required identity verification (KYC) checks.
+- **General Users (Forecasters):** You must be at least 18 years old and a resident of the United States.
 - **Claims by Public Figures:** An individual whose NPSI profile exists on the Platform may claim that profile to direct the good-faith royalty. Claims for Minors (individuals under 18) must be completed by a parent or legal guardian who accepts full legal responsibility for the claim.
 
 ## 3. Nature of the Platform
@@ -26,78 +26,90 @@ Pauv is the world's first real-time index of public sentiment. The Platform host
 - **Not a financial instrument.** An NPSI is a derived data product, similar to a bond rating or credit score. Forecasts opened on an NPSI do not represent ownership, equity, debt, profit participation, voting rights, rights to services, or any claim on any person or enterprise.
 - **Signal market.** Pauv occupies a category it calls the signal market, distinct from prediction markets (binary settlement) and securities markets (ownership).
 
-## 4. Forecasts and DTM 4.0
+## 4. Beta Status
 
-- **Forecasts.** A forecast is a directional view on an NPSI expressed through Pauv's proprietary pricing engine, **DTM 4.0**, a single-curve bonding model with a softplus price floor. A **Positive Forecast** (long) pulls the NPSI up; a **Negative Forecast** (escrow-backed short) pulls it down.
-- **Negative Forecast liquidation.** Negative Forecasts are fully collateralized by an on-platform escrow equal to twice the user's net stake. A Negative Forecast is automatically closed if the cost to buy back its tokens reaches 95% of its escrow; at that point the user's return is zero. A user cannot lose more than the net stake committed to a Negative Forecast, but may lose all of it in a sharp adverse move of the NPSI.
-- **No counterparty matching.** All forecasts settle instantly against DTM 4.0. There is no order book, no bid/ask, no secondary market, and no user-to-user matching.
+The Platform is currently in **beta** while we ensure the stability of our trading engine. During the beta period:
+
+- Every withdrawal request is reviewed manually and is approved (or denied) within 12 hours.
+- The only basis on which a withdrawal will be denied is a genuine flaw or error — for example, if the trading engine credited a balance amount that it should not have. If a withdrawal is denied, we will contact you to explain the discrepancy and resolve it.
+
+## 5. Forecasts and DTM 4.1
+
+- **Forecasts.** A forecast is a directional view on an NPSI expressed through Pauv's proprietary pricing engine, **DTM 4.1**, a single-curve bonding model with a softplus price floor. A **Positive Forecast** (long) pulls the NPSI up; a **Negative Forecast** (escrow-backed short) pulls it down.
+- **Negative Forecast liquidation.** Negative Forecasts are fully collateralized by an on-platform escrow equal to twice the user's net stake. A Negative Forecast is automatically closed if the cost to buy back its tokens reaches the position's liquidation threshold; at that point the user's return is zero. The liquidation threshold is shown on the position before it is opened and may tighten at low NPSI prices for book-stability reasons. A user cannot lose more than the net stake committed to a Negative Forecast, but may lose all of it in a sharp adverse move of the NPSI.
+- **No counterparty matching.** All forecasts settle instantly against DTM 4.1. There is no order book, no bid/ask, no secondary market, and no user-to-user matching.
 - **No ownership.** Opening a forecast does not give you ownership of the NPSI, the public figure, or any enterprise. The NPSI is a signal, not an asset.
 - **No borrowing; no leverage.** Negative Forecasts do not borrow tokens or funds from other users. Both legs of the escrow originate from the user's net stake and capital extracted from the curve itself. Pauv does not offer margin, lending, or leveraged forecasts.
-- **Internal tokens.** DTM 4.0 uses internal token accounting, but users do not directly interact with tokens. Tokens are database records; they are not cryptocurrency, not transferable, and have no value outside the Platform.
-- **Algorithmic pricing.** NPSI values are determined solely by forecasting activity through the published DTM 4.0 algorithm. Initial values are set through Elo-Based Comparative Pricing.
+- **Internal positions.** DTM 4.1 uses internal token accounting, but users do not directly interact with tokens. Positions are platform records; they are not cryptocurrency, not transferable, and have no value outside the Platform.
+- **Algorithmic pricing.** NPSI values are determined solely by forecasting activity through the published DTM 4.1 algorithm. The starting values of the original 101 NPSI profiles were set through Elo-based ranking by beta users; new profiles are seeded through Elo-Based Comparative Pricing.
 
-## 5. Points and Fiat Transactions
+## 6. Funds, Deposits, and Withdrawals
 
-- **Definition.** "Points" are non-transferable, closed-loop ledger entries used solely within the Platform. 1 point = $1 USD. Points are not cryptocurrency.
-- **Custodial FBO accounts.** When you load funds via our payment partners, your USD is held in a "For Benefit Of" (FBO) custodial account at a regulated U.S. depository institution. Pauv does not commingle user funds with corporate operating funds.
-- **Withdrawals.** You may withdraw your point balance back to USD at a 1:1 ratio. Withdrawal requests are subject to a 1–2 business day reconciliation period.
-- **No transfers.** You may not sell, gift, transfer, or trade points or forecasts to other users directly. Peer-to-peer transfers are strictly disabled.
+- **On-platform balance.** Your "balance" is a non-transferable, closed-loop ledger entry used solely within the Platform, displayed in U.S. dollars (1 USDC deposited = $1 of balance).
+- **Funding.** The Platform accepts deposits in **USDC on Solana** sent from a Solana wallet you connect to your account.
+- **Withdrawals.** You may withdraw your on-platform balance back to your connected Solana wallet in USDC at any time. Withdrawal requests are subject to the beta-review process described in Section 4. After approval, USDC is sent on-chain to the wallet connected to your account.
+- **Wallet responsibility.** You are responsible for safeguarding the private keys and recovery materials of any wallet you connect to your account. Pauv cannot recover funds lost due to a compromised, lost, or misconfigured wallet, nor funds sent in the wrong token or on the wrong network.
+- **No transfers.** You may not sell, gift, transfer, or trade your on-platform balance or open forecasts to other users directly. Peer-to-peer transfers are strictly disabled.
 
-## 6. Account Registration, KYC, & Security
+## 7. Account Registration & Security
 
-Pauv is a registered Money Services Business (MSB) with FinCEN. To comply with the Bank Secrecy Act (BSA) and AML laws:
+- **Account creation.** You must provide a name and an email address to create an account.
+- **Wallet linkage.** Deposits and withdrawals are tied to the Solana wallet you have connected. You may update the connected wallet from your account settings.
+- **Security.** You are responsible for maintaining the confidentiality of your login credentials, the security of your connected wallet, and for all activity under your account.
+- **Monitoring.** We reserve the right to suspend accounts, delay withdrawals, or terminate access for activity that is harmful to other users, to the integrity of the NPSI, or to the Platform.
 
-- **Verification.** We require identity verification via our partner Soap Payments. You must provide accurate, current, and complete information.
-- **Monitoring.** We actively monitor for fraud, coordinated manipulation, structuring, and illicit activity. We reserve the right to suspend accounts, delay withdrawals, or report activity to regulatory authorities.
-- **Security.** You are responsible for maintaining the confidentiality of your login credentials and for all activity under your account.
-
-## 7. Fees
+## 8. Fees
 
 - **Standard fee.** Every forecast (open or close) incurs a total fee of **1.8%** on the gross cash amount: **1.3%** to Pauv and **0.5%** to a good-faith royalty set aside for the public figure associated with the NPSI. The same 1.8% rate applies to the residual escrow returned on a closed or liquidated Negative Forecast.
 - **Fee isolation.** Fees are collected into a separate treasury ledger and do not enter the bonding curve. Fees do not affect the NPSI value or pricing math.
 - **Round-trip cost.** A user who opens and immediately closes a forecast pays approximately 3.57% in total fees, the compounded effect of paying 1.8% on both legs.
 
-## 8. Good-Faith Royalty and Claim System
+## 9. Good-Faith Royalty and Claim System
 
 - **Purpose.** The 0.5% good-faith royalty is a set-aside for the public figure associated with the NPSI. It is not a salary, dividend, passive income, revenue share, or payment for services.
-- **Claim flow.** Every NPSI profile includes a "Claim Your Profile" feature. A public figure who passes identity verification may direct accrued and future royalties to a verified bank account or to a verified 501(c)(3) charity.
+- **Claim flow.** Every NPSI profile includes a "Claim Your Profile" feature. A public figure whose claim is approved by Pauv may direct accrued and future royalties to a Solana wallet they control (paid in USDC) or to a verified 501(c)(3) charity (paid in U.S. dollars).
 - **No endorsement.** Claiming a profile does not constitute endorsement of, affiliation with, or authorization of Pauv, and does not grant Pauv any rights to the Name, Image, or Likeness of the public figure.
 - **Unclaimed funds.** Royalties that remain unclaimed through the state-mandated dormancy period are remitted to the applicable State Controller's office under escheatment laws.
 
-## 9. Prohibited Conduct
+## 10. Listings
+
+Listings on the Platform are approval-gated. Users may submit a public figure to be listed, and public figures (or their authorized representatives) may request their own listing. In either case, Pauv reviews and decides whether to list. Pauv does not list private individuals.
+
+## 11. Prohibited Conduct
 
 You agree not to:
 
-- Use the Platform for money laundering, terrorist financing, or other illegal activities.
+- Use the Platform to facilitate any illegal activity.
 - Use bots, spiders, or automated scripts to interact with the Platform.
-- Engage in coordinated schemes intended to manipulate an NPSI value (including but not limited to wash forecasting, structuring, or rapid round-trip forecasting designed to manipulate fee or price outcomes).
-- Attempt to transfer points or internal tokens outside of the Platform.
+- Engage in coordinated schemes intended to manipulate an NPSI value (including but not limited to wash forecasting or rapid round-trip forecasting designed to manipulate fee or price outcomes).
+- Attempt to transfer your on-platform balance or open positions outside of the Platform.
 - Represent any public figure's NPSI as an investment, security, or endorsement.
 
-## 10. Risk Disclosure & Disclaimers
+## 12. Risk Disclosure & Disclaimers
 
 **YOU ACKNOWLEDGE THAT OPENING AND CLOSING FORECASTS ON PAUV CARRIES RISK OF LOSS.**
 
 - **Not an investment.** Forecasts are opened for entertainment and signal purposes. Pauv does not provide financial, tax, legal, or investment advice.
-- **NPSI movement.** The NPSI can move sharply in either direction based on forecasting activity. You can lose some or all of the points committed to a forecast.
-- **Automatic liquidation of Negative Forecasts.** A Negative Forecast is automatically closed when the cost to buy back its tokens reaches 95% of its escrow. You acknowledge that a sharp upward move of the NPSI can trigger this liquidation with no advance notice, resulting in a total loss of the net stake committed to that Negative Forecast.
-- **AI-generated imagery.** All visual representations of public figures on the Platform are AI-generated, not literal photographs. Imagery is a stylized representation intended to identify the NPSI, not to depict the individual.
-- **Interest on custodial float.** Funds held in custodial accounts may earn interest. Any such earnings are the sole property of Pauv Inc.
+- **NPSI movement.** The NPSI can move sharply in either direction based on forecasting activity. You can lose some or all of the funds committed to a forecast.
+- **Automatic liquidation of Negative Forecasts.** A Negative Forecast is automatically closed when the cost to buy back its tokens reaches the position's liquidation threshold. You acknowledge that a sharp upward move of the NPSI can trigger this liquidation with no advance notice, resulting in a total loss of the net stake committed to that Negative Forecast.
+- **Imagery.** Visual representations of public figures on the Platform are either AI-generated or sourced from copyright-cleared / public-domain materials. Imagery is used to identify an NPSI, not to depict the individual in any literal commercial sense.
+- **Beta software.** The Platform is in beta. You acknowledge that bugs in the trading engine could in principle cause incorrect balance calculations, and that the manual withdrawal-review process exists to catch and correct any such error before funds leave the Platform.
+- **Crypto risk.** USDC on Solana is a cryptocurrency asset. You acknowledge that depositing and withdrawing carry network-level risks (network outages, congestion, stablecoin de-pegging, smart-contract risk) that are outside Pauv's control.
 - **"As is" service.** The Platform is provided "as is" and "as available" without warranties of any kind.
 
-## 11. Public-Domain Framing and Non-Endorsement
+## 13. Public-Domain Framing and Non-Endorsement
 
 - **NPSI derives from public sentiment.** NPSI profiles exist because public sentiment about a cultural figure is in the public domain. Listing an NPSI does not require consent from the indexed individual, and the Platform expressly does not claim to use any public figure's Name, Image, or Likeness.
-- **Non-endorsement notice.** Every NPSI profile displays a conspicuous disclaimer: *"[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. All imagery is AI-generated. Forecasts reflect public sentiment, not the views of the person indexed."*
+- **Non-endorsement notice.** Every NPSI profile displays a conspicuous disclaimer: *"[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. All imagery is either AI-generated or sourced from copyright-cleared materials. Forecasts reflect public sentiment, not the views of the person indexed."*
 
-## 12. Limitation of Liability
+## 14. Limitation of Liability
 
 To the maximum extent permitted by law, Pauv Inc. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues. Pauv's aggregate liability shall not exceed the amount you paid to Pauv in the twelve (12) months preceding the claim.
 
-## 13. Termination
+## 15. Termination
 
-Pauv reserves the right to suspend or terminate your account at our sole discretion, without notice, for conduct that violates these Terms, AML/BSA regulations, or is harmful to other users or to the integrity of the NPSI.
+Pauv reserves the right to suspend or terminate your account at our sole discretion, without notice, for conduct that violates these Terms or is harmful to other users or to the integrity of the NPSI.
 
-## 14. Governing Law & Dispute Resolution
+## 16. Governing Law & Dispute Resolution
 
 These Terms are governed by the laws of the State of Texas. Any dispute shall be resolved by **binding arbitration in Austin, Texas**. You waive your right to participate in a class action lawsuit or class-wide arbitration.
