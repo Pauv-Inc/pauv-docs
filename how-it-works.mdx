@@ -1,6 +1,6 @@
 ---
 title: How It Works
-description: "The NPSI, Positive and Negative Forecasts, and DTM 4.1."
+description: "The NPSI, Positive and Negative Forecasts, and VBC 4.1."
 ---
 
 ## The Net Public Sentiment Index
@@ -34,9 +34,9 @@ Users interact with Pauv by opening and closing forecasts. A forecast is a direc
   </Step>
 </Steps>
 
-## The Single Curve Model (DTM 4.1)
+## The Valence Bonding Curve (VBC 4.1)
 
-**DTM 4.1** is Pauv's proprietary pricing engine. Every NPSI is governed by a single continuous bonding curve. There are no separate pools, no order books, no liquidity providers, and no counterparty matching.
+**VBC 4.1** is Pauv's proprietary pricing engine. Every NPSI is governed by a single continuous bonding curve. There are no separate pools, no order books, no liquidity providers, and no counterparty matching.
 
 Positive Forecasts push the curve up; Negative Forecasts push it down. Both directions use the same published price function, with a softplus floor that guarantees the price stays strictly above zero. The engine analyses every forecast against the full state of the book before it settles, so a single action can't leave any other position underfunded.
 
@@ -64,13 +64,13 @@ Positive Forecasts push the curve up; Negative Forecasts push it down. Both dire
 | Open Negative Forecast | Curve moves down | Falls |
 | Close Negative Forecast | Curve moves up | Rises |
 
-### Positive Forecasts (Longs)
+### Positive Forecasts
 
 Opening a Positive Forecast commits funds to the curve, raising the index. The user receives an internal token position sized by the curve's integral between the old and new state. Closing the position reverses the integral back down the curve and returns the proceeds — a gain if the NPSI rose while the forecast was open, a loss if it fell.
 
-### Negative Forecasts (Shorts)
+### Negative Forecasts
 
-Opening a Negative Forecast pushes the curve down using **escrow-based shorting**: the user's net stake is matched dollar-for-dollar by capital extracted from the curve, and both amounts are held in an **escrow** equal to twice the net stake. No tokens are borrowed from other users, no margin is extended, and no additional capital can ever be required from the user. Closing the forecast uses the escrow to buy the tokens back along the curve; whatever remains after the buy-back is returned to the user as their net proceeds.
+Opening a Negative Forecast pushes the curve down through an **escrow-backed mechanism**: the user's net stake is matched dollar-for-dollar by capital extracted from the curve, and both amounts are held in an **escrow** equal to twice the net stake. No tokens are borrowed from other users, no margin is extended, and no additional capital can ever be required from the user. Closing the forecast uses the escrow to buy the tokens back along the curve; whatever remains after the buy-back is returned to the user as their net proceeds.
 
 - If the NPSI fell while the forecast was open, the buy-back costs less than the net stake and the user receives more than they committed.
 - If the NPSI rose, the buy-back costs more than the net stake and the user receives less — possibly zero.

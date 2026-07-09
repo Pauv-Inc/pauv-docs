@@ -1,11 +1,7 @@
 ---
 title: Getting Started
-description: "Connect your Solana wallet, fund your account in USDC, and open your first forecast on Pauv."
+description: "Create your account, fund it with crypto or fiat, and open your first forecast on Pauv."
 ---
-
-<Note>
-  **Beta.** While we ensure the stability of our trading engine, withdrawal requests are reviewed manually and approved (or denied for genuine errors) within 12 hours. See [Funds](/platform/funds) for details.
-</Note>
 
 ## Create Your Account
 
@@ -13,16 +9,19 @@ description: "Connect your Solana wallet, fund your account in USDC, and open yo
   <Step title="Sign up">
     Visit [pauv.com](https://pauv.com) and create your account with your **name** and **email address**. That is all we collect at sign-up.
   </Step>
-  <Step title="Connect your Solana wallet">
-    Pauv runs on **Solana**. Connect a wallet from your browser via extension (e.g. Phantom, Solflare, Backpack), or scan the QR code displayed in the app to connect from a mobile wallet.
+  <Step title="Connect your Solana wallet (for crypto)">
+    Connect a wallet from your browser via extension (e.g. Phantom, Solflare, Backpack), or scan the QR code displayed in the app to connect from a mobile wallet.
 
-    Your wallet address is linked to your account and is used for both deposits and withdrawals.
+    Your wallet address is linked to your account and is used for crypto deposits and crypto withdrawals.
   </Step>
-  <Step title="Deposit USDC">
-    Send **USDC on Solana** from your connected wallet to your Pauv account. Your on-platform balance is credited dollar-for-dollar (1 USDC = $1) as soon as the deposit is confirmed on-chain.
+  <Step title="Fund your account">
+    Fund with **crypto or fiat** — your on-platform balance is credited at the U.S. dollar value of your deposit:
+
+    - **Crypto:** Deposit **any token on any network**. Crypto deposits are processed through our Soap Payments gateway via **Glide** and credited once confirmed on-chain. No identity verification required.
+    - **Fiat:** Deposit by card or bank transfer, processed by **AptPay** and held in a regulated FBO custodial account. All fiat deposits require identity verification (KYC), performed by **Veriff** through our Soap Payments gateway.
   </Step>
   <Step title="Open your first forecast">
-    Browse NPSI profiles, form a read, and open a **Positive Forecast** (you think cultural relevance will rise) or a **Negative Forecast** (you think it will fall). Every forecast settles instantly against DTM 4.1.
+    Browse NPSI profiles, form a read, and open a **Positive Forecast** (you think cultural relevance will rise) or a **Negative Forecast** (you think it will fall). Every forecast settles instantly against VBC 4.1.
   </Step>
 </Steps>
 
@@ -32,7 +31,8 @@ description: "Connect your Solana wallet, fund your account in USDC, and open yo
 |-------------|---------|
 | **Age** | Must be 18 or older to open a forecast |
 | **Residency** | United States only |
-| **Wallet** | A Solana wallet that supports USDC (e.g. Phantom, Solflare, Backpack) |
+| **Wallet** | A Solana wallet (e.g. Phantom, Solflare, Backpack) — required for crypto deposits and crypto withdrawals |
+| **Verification** | Identity verification via Veriff — required for all fiat deposits |
 
 ## Account Security
 
@@ -46,8 +46,8 @@ If you suspect unauthorized access to your **Pauv account** (not your wallet):
 
 ## Tips for New Users
 
-- **Start small.** Familiarize yourself with the platform and DTM 4.1 before committing larger amounts.
-- **Understand the model.** The NPSI moves based on forecasting activity. Read [How It Works](/how-it-works) to understand DTM 4.1 and fees.
+- **Start small.** Familiarize yourself with the platform and VBC 4.1 before committing larger amounts.
+- **Understand the model.** The NPSI moves based on forecasting activity. Read [How It Works](/how-it-works) to understand VBC 4.1 and fees.
 - **Negative Forecasts can be liquidated.** An escrow-backed Negative Forecast is automatically closed at zero return if the NPSI rises enough that the buy-back cost reaches the position's liquidation threshold. You cannot lose more than your net stake, but you can lose all of it in a sharp adverse move.
 - **Forecasts are for entertainment.** Opening a forecast is a way to express conviction about public perception. Do not commit funds you cannot afford to lose.
-- **Withdrawals are reviewed within 12 hours** during the beta period. See [Funds](/platform/funds).
+- **Withdrawals are automatic.** Press withdraw and funds arrive in a timeframe that depends on the payout method you choose. See [Funds](/platform/funds).

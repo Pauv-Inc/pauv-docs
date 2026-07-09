@@ -17,7 +17,6 @@ description: "How to get help with your Pauv account, forecasts, and withdrawals
 |------|---------|
 | **Operating Hours** | Monday – Friday, 9:00 AM – 6:00 PM CST |
 | **Standard Response** | 24–48 business hours for general inquiries |
-| **Withdrawal Review (beta)** | Within 12 hours of request, 7 days a week |
 | **Priority Escalation** | Within 12 business hours for security and fraud issues |
 
 ## Priority Escalations
@@ -27,7 +26,7 @@ Inquiries related to the following are treated as **Priority Escalations** and t
 - Unauthorized account access or suspected fraud
 - Account lockouts
 - Deposit not credited after on-chain confirmation
-- Withdrawal review questions
+- Withdrawal questions
 - Account security concerns
 
 ## Reporting Fraud or Unauthorized Access
@@ -59,7 +58,7 @@ Before contacting support, check if your question is answered in our documentati
 
 <CardGroup cols={2}>
   <Card title="How It Works" icon="circle-info" href="/how-it-works">
-    The NPSI, forecasts, and DTM 4.1
+    The NPSI, forecasts, and VBC 4.1
   </Card>
   <Card title="Funds" icon="wallet" href="/platform/funds">
     Deposits, on-platform balance, and withdrawals
@@ -76,19 +75,19 @@ Before contacting support, check if your question is answered in our documentati
 
 <AccordionGroup>
   <Accordion title="How long do withdrawals take?">
-    During the beta period, every withdrawal request is reviewed by our team and approved within **12 hours**. The only reason a withdrawal would be denied is a genuine flaw or error — for example, the trading engine credited you more than it should have. Once approved, USDC is sent to your connected Solana wallet on-chain.
-  </Accordion>
-  <Accordion title="Why was my withdrawal denied?">
-    Withdrawals are only denied if our review finds a genuine flaw or error in how your balance was calculated. If that happens, we will contact you to explain what we found and how we will resolve it. This safeguard exists during beta while we ensure the stability of our trading engine.
+    Withdrawals are processed **automatically** — there is no manual review. Once you press withdraw, arrival time depends on the payout method you choose: USDC on Solana arrives once the transaction confirms on-chain, and fiat payouts arrive on the timeline of the payout rail you selected.
   </Accordion>
   <Accordion title="My deposit hasn't shown up yet. What do I do?">
-    Confirm the transaction was sent as **USDC on Solana** to your Pauv deposit address. Once the deposit is confirmed on-chain, your balance is credited automatically. If you sent the wrong token or used a different network, contact support — recovery may not be possible.
+    Crypto deposits — any token, on any network — are credited automatically once confirmed on-chain. Fiat deposits are credited once the payment is processed. If a confirmed deposit has not been credited, contact support with the transaction details.
+  </Accordion>
+  <Accordion title="Do I need to verify my identity?">
+    Identity verification (KYC) is required for **all fiat deposits** and is performed by **Veriff** through our Soap Payments gateway. You complete it once, before your first fiat deposit. Crypto deposits do not require identity verification.
   </Accordion>
   <Accordion title="Can I transfer my balance or forecasts to someone else?">
     No. On-platform balances and positions are not transferable to other users. To move funds, withdraw to your own wallet.
   </Accordion>
   <Accordion title="What happens if the NPSI moves against my forecast?">
-    The NPSI is driven entirely by forecasting activity through DTM 4.1. If forecasting pushes the index against you, closing your forecast will return less than you committed. A Negative Forecast can be automatically liquidated at zero return if the NPSI rises enough that the buy-back cost reaches the position's liquidation threshold. Pauv does not offer refunds for NPSI movement or liquidations. See our [Refund Policy](/legal/refund-policy).
+    The NPSI is driven entirely by forecasting activity through VBC 4.1. If forecasting pushes the index against you, closing your forecast will return less than you committed. A Negative Forecast can be automatically liquidated at zero return if the NPSI rises enough that the buy-back cost reaches the position's liquidation threshold. Pauv does not offer refunds for NPSI movement or liquidations. See our [Refund Policy](/legal/refund-policy).
   </Accordion>
   <Accordion title="I'm a public figure. How do I claim my NPSI profile?">
     Visit your NPSI profile on pauv.com and select **Claim Your Profile**. Our team will verify your identity and you can choose to direct your good-faith royalty to a verified Solana wallet (paid in USDC) or to a verified 501(c)(3) charity. See [For Public Figures](/platform/for-talent).

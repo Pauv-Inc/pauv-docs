@@ -5,7 +5,7 @@ description: "How to open and close Positive and Negative Forecasts on Pauv."
 
 ## What Is a Forecast?
 
-A **forecast** is a directional view on a public figure's cultural relevance, expressed through their NPSI. You are not buying, selling, or owning anything. You are opening a position against Pauv's pricing engine, DTM 4.1, that moves the live index value up or down.
+A **forecast** is a directional view on a public figure's cultural relevance, expressed through their NPSI. You are not buying, selling, or owning anything. You are opening a position against Pauv's pricing engine, VBC 4.1, that moves the live index value up or down.
 
 | Forecast Type | What It Means |
 |---------------|---------------|
@@ -13,7 +13,7 @@ A **forecast** is a directional view on a public figure's cultural relevance, ex
 | **Negative Forecast** | You believe the figure's cultural relevance will fall. Pulls the NPSI down. |
 
 <Warning>
-  Forecasts are not securities, ownership interests, investment contracts, or wagers on a binary event. They are continuous, directional signals priced by DTM 4.1 for entertainment and engagement purposes only.
+  Forecasts are not securities, ownership interests, investment contracts, or wagers on a binary event. They are continuous, directional signals priced by VBC 4.1 for entertainment and engagement purposes only.
 </Warning>
 
 ## Opening a Forecast
@@ -29,19 +29,19 @@ A **forecast** is a directional view on a public figure's cultural relevance, ex
     Enter the amount, in dollars, you want to commit from your on-platform balance. The 1.8% fee is deducted first, and the remaining 98.2% enters the curve as your net stake.
   </Step>
   <Step title="Settlement is instant">
-    DTM 4.1 settles your forecast immediately. There is no order book, no counterparty, and no waiting.
+    VBC 4.1 settles your forecast immediately. There is no order book, no counterparty, and no waiting.
   </Step>
 </Steps>
 
 ## How Positive Forecasts Work
 
-A Positive Forecast is a **long position** on the NPSI. Your net stake enters the curve and pushes the index up. You receive an internal token position sized by the curve's integral between the old and new state.
+A Positive Forecast is an **upward position** on the NPSI. Your net stake enters the curve and pushes the index up. You receive an internal token position sized by the curve's integral between the old and new state.
 
 When you close, your tokens are reversed back down the curve and the proceeds are credited to your balance. If the NPSI rose while you held the position, you receive more than you committed; if it fell, you receive less.
 
 ## How Negative Forecasts Work
 
-A Negative Forecast is an **escrow-backed short position** on the NPSI. No tokens are borrowed from other users. Instead:
+A Negative Forecast is an **escrow-backed downward position** on the NPSI. No tokens are borrowed from other users. Instead:
 
 1. Your net stake is matched dollar-for-dollar by an equal amount extracted from the curve.
 2. Both amounts are held in an **escrow** equal to twice your net stake.
@@ -58,7 +58,7 @@ When you close, the escrow is used to buy the same number of tokens back along t
 
 ## Closing a Forecast
 
-When you are ready to exit, close your forecast. For a Positive Forecast, your tokens are sold back to the curve. For a Negative Forecast, the escrow buys your tokens back from the curve. DTM 4.1 calculates your gross proceeds, the 1.8% fee is deducted, and the net payout is credited to your balance.
+When you are ready to exit, close your forecast. For a Positive Forecast, your tokens are sold back to the curve. For a Negative Forecast, the escrow buys your tokens back from the curve. VBC 4.1 calculates your gross proceeds, the 1.8% fee is deducted, and the net payout is credited to your balance.
 
 If you open a forecast and immediately close it with no other activity, you receive approximately your original amount in gross proceeds, minus the fees on each leg.
 
@@ -75,7 +75,7 @@ See [How It Works](/how-it-works#fees) for full detail.
 
 ## Why Both Directions Matter
 
-Prior platforms that tried to quantify attention on people (BitClout and Friend.tech among them) offered only one direction. That made their indices one-sided and manipulable. DTM 4.1 runs Positive and Negative Forecasts on the same curve in opposite directions, producing a more accurate, self-correcting signal. When the NPSI drifts away from what the market believes is accurate, there is an incentive to push it back in either direction.
+Prior platforms that tried to quantify attention on people (BitClout and Friend.tech among them) offered only one direction. That made their indices one-sided and manipulable. VBC 4.1 runs Positive and Negative Forecasts on the same curve in opposite directions, producing a more accurate, self-correcting signal. When the NPSI drifts away from what the market believes is accurate, there is an incentive to push it back in either direction.
 
 ## Important Rules
 
@@ -93,4 +93,4 @@ When you open a forecast, Pauv displays the following notice:
 
 Every NPSI profile also displays:
 
-> *[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. All imagery is either AI-generated or sourced from copyright-cleared materials. Forecasts reflect public sentiment, not the views of the person indexed.*
+> *[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. Forecasts reflect public sentiment, not the views of the person indexed.*

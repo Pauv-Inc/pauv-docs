@@ -16,7 +16,8 @@ By creating an account, accessing, or using pauv.com (the "Platform"), you agree
 ## 2. Eligibility
 
 - **General Users (Forecasters):** You must be at least 18 years old and a resident of the United States.
-- **Claims by Public Figures:** An individual whose NPSI profile exists on the Platform may claim that profile to direct the good-faith royalty. Claims for Minors (individuals under 18) must be completed by a parent or legal guardian who accepts full legal responsibility for the claim.
+- **Claims by Public Figures:** An individual whose NPSI profile exists on the Platform may claim that profile to direct the good-faith royalty.
+- **No Minors.** The Platform does not list NPSI profiles for individuals under 18. Only adult public figures are indexed.
 
 ## 3. Nature of the Platform
 
@@ -28,33 +29,31 @@ Pauv is the world's first real-time index of public sentiment. The Platform host
 
 ## 4. Beta Status
 
-The Platform is currently in **beta** while we ensure the stability of our trading engine. During the beta period:
+The Platform is currently in **beta** while we ensure the stability of our pricing engine. Features may change, and bugs may occur. Any confirmed balance error is corrected as described in the [Refund Policy](/legal/refund-policy).
 
-- Every withdrawal request is reviewed manually and is approved (or denied) within 12 hours.
-- The only basis on which a withdrawal will be denied is a genuine flaw or error — for example, if the trading engine credited a balance amount that it should not have. If a withdrawal is denied, we will contact you to explain the discrepancy and resolve it.
+## 5. Forecasts and VBC 4.1
 
-## 5. Forecasts and DTM 4.1
-
-- **Forecasts.** A forecast is a directional view on an NPSI expressed through Pauv's proprietary pricing engine, **DTM 4.1**, a single-curve bonding model with a softplus price floor. A **Positive Forecast** (long) pulls the NPSI up; a **Negative Forecast** (escrow-backed short) pulls it down.
+- **Forecasts.** A forecast is a directional view on an NPSI expressed through Pauv's proprietary pricing engine, **VBC 4.1**, a single-curve bonding model with a softplus price floor. A **Positive Forecast** pulls the NPSI up; an escrow-backed **Negative Forecast** pulls it down.
 - **Negative Forecast liquidation.** Negative Forecasts are fully collateralized by an on-platform escrow equal to twice the user's net stake. A Negative Forecast is automatically closed if the cost to buy back its tokens reaches the position's liquidation threshold; at that point the user's return is zero. The liquidation threshold is shown on the position before it is opened and may tighten at low NPSI prices for book-stability reasons. A user cannot lose more than the net stake committed to a Negative Forecast, but may lose all of it in a sharp adverse move of the NPSI.
-- **No counterparty matching.** All forecasts settle instantly against DTM 4.1. There is no order book, no bid/ask, no secondary market, and no user-to-user matching.
+- **No counterparty matching.** All forecasts settle instantly against VBC 4.1. There is no order book, no bid/ask, no secondary market, and no user-to-user matching.
 - **No ownership.** Opening a forecast does not give you ownership of the NPSI, the public figure, or any enterprise. The NPSI is a signal, not an asset.
 - **No borrowing; no leverage.** Negative Forecasts do not borrow tokens or funds from other users. Both legs of the escrow originate from the user's net stake and capital extracted from the curve itself. Pauv does not offer margin, lending, or leveraged forecasts.
-- **Internal positions.** DTM 4.1 uses internal token accounting, but users do not directly interact with tokens. Positions are platform records; they are not cryptocurrency, not transferable, and have no value outside the Platform.
-- **Algorithmic pricing.** NPSI values are determined solely by forecasting activity through the published DTM 4.1 algorithm. The starting values of the original 101 NPSI profiles were set through Elo-based ranking by beta users; new profiles are seeded through Elo-Based Comparative Pricing.
+- **Internal positions.** VBC 4.1 uses internal token accounting, but users do not directly interact with tokens. Positions are platform records; they are not cryptocurrency, not transferable, and have no value outside the Platform.
+- **Algorithmic pricing.** NPSI values are determined solely by forecasting activity through the published VBC 4.1 algorithm. The starting values of the original 101 NPSI profiles were set through Elo-based ranking by beta users; new profiles are seeded through Elo-Based Comparative Pricing.
 
 ## 6. Funds, Deposits, and Withdrawals
 
-- **On-platform balance.** Your "balance" is an internal ledger entry displayed in U.S. dollars (1 USDC deposited = $1 of balance). It cannot be transferred to other users, but you may convert it back to USDC at any time by withdrawing to your connected Solana wallet.
-- **Funding.** The Platform accepts deposits in **USDC on Solana** sent from a Solana wallet you connect to your account.
-- **Withdrawals.** You may withdraw your on-platform balance back to your connected Solana wallet in USDC at any time. Withdrawal requests are subject to the beta-review process described in Section 4. After approval, USDC is sent on-chain to the wallet connected to your account.
+- **On-platform balance.** Your "balance" is an internal ledger entry displayed in U.S. dollars, credited at the U.S. dollar value of your deposits. It cannot be transferred to other users, but you may withdraw it at any time.
+- **Funding.** The Platform accepts (a) crypto deposits in any token on any network, processed through our payment gateway Soap Payments via **Glide**, and (b) fiat deposits by card or bank transfer, processed by **AptPay** and held in a regulated **FBO custodial account**.
+- **Fiat verification.** All fiat deposits require identity verification (KYC), performed by **Veriff** through the Soap Payments gateway. You must provide accurate, current, and complete information. Crypto deposits do not require identity verification.
+- **Withdrawals.** You may withdraw your on-platform balance at any time. Withdrawals are processed automatically; delivery time depends on the payout method you select. Crypto withdrawals are sent as USDC on Solana to the wallet connected to your account; fiat payouts are processed by AptPay.
 - **Wallet responsibility.** You are responsible for safeguarding the private keys and recovery materials of any wallet you connect to your account. Pauv cannot recover funds lost due to a compromised, lost, or misconfigured wallet, nor funds sent in the wrong token or on the wrong network.
 - **No transfers.** You may not sell, gift, transfer, or trade your on-platform balance or open forecasts to other users directly. Peer-to-peer transfers are strictly disabled.
 
 ## 7. Account Registration & Security
 
 - **Account creation.** You must provide a name and an email address to create an account.
-- **Wallet linkage.** Deposits and withdrawals are tied to the Solana wallet you have connected. You may update the connected wallet from your account settings.
+- **Wallet linkage.** Crypto deposits and crypto withdrawals are tied to the Solana wallet you have connected. You may update the connected wallet from your account settings.
 - **Security.** You are responsible for maintaining the confidentiality of your login credentials, the security of your connected wallet, and for all activity under your account.
 - **Monitoring.** We reserve the right to suspend accounts, delay withdrawals, or terminate access for activity that is harmful to other users, to the integrity of the NPSI, or to the Platform.
 
@@ -73,7 +72,7 @@ The Platform is currently in **beta** while we ensure the stability of our tradi
 
 ## 10. Listings
 
-Listings on the Platform are approval-gated. Users may submit a public figure to be listed, and public figures (or their authorized representatives) may request their own listing. In either case, Pauv reviews and decides whether to list. Pauv does not list private individuals.
+Listings on the Platform are approval-gated. Users may submit a public figure to be listed, and public figures (or their authorized representatives) may request their own listing. In either case, Pauv reviews and decides whether to list. Pauv does not list private individuals or individuals under 18.
 
 ## 11. Prohibited Conduct
 
@@ -92,15 +91,14 @@ You agree not to:
 - **Not an investment.** Forecasts are opened for entertainment and signal purposes. Pauv does not provide financial, tax, legal, or investment advice.
 - **NPSI movement.** The NPSI can move sharply in either direction based on forecasting activity. You can lose some or all of the funds committed to a forecast.
 - **Automatic liquidation of Negative Forecasts.** A Negative Forecast is automatically closed when the cost to buy back its tokens reaches the position's liquidation threshold. You acknowledge that a sharp upward move of the NPSI can trigger this liquidation with no advance notice, resulting in a total loss of the net stake committed to that Negative Forecast.
-- **Imagery.** Visual representations of public figures on the Platform are either AI-generated or sourced from copyright-cleared / public-domain materials. Imagery is used to identify an NPSI, not to depict the individual in any literal commercial sense.
-- **Beta software.** The Platform is in beta. You acknowledge that bugs in the trading engine could in principle cause incorrect balance calculations, and that the manual withdrawal-review process exists to catch and correct any such error before funds leave the Platform.
-- **Crypto risk.** USDC on Solana is a cryptocurrency asset. You acknowledge that depositing and withdrawing carry network-level risks (network outages, congestion, stablecoin de-pegging, smart-contract risk) that are outside Pauv's control.
+- **Beta software.** The Platform is in beta. You acknowledge that bugs in the pricing engine could in principle cause incorrect balance calculations; any confirmed error is corrected as described in the [Refund Policy](/legal/refund-policy).
+- **Crypto risk.** Cryptocurrency deposits and withdrawals carry network-level risks (network outages, congestion, stablecoin de-pegging, smart-contract risk) that are outside Pauv's control.
 - **"As is" service.** The Platform is provided "as is" and "as available" without warranties of any kind.
 
 ## 13. Public-Domain Framing and Non-Endorsement
 
 - **NPSI derives from public sentiment.** NPSI profiles exist because public sentiment about a cultural figure is in the public domain. Listing an NPSI does not require consent from the indexed individual, and the Platform expressly does not claim to use any public figure's Name, Image, or Likeness.
-- **Non-endorsement notice.** Every NPSI profile displays a conspicuous disclaimer: *"[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. All imagery is either AI-generated or sourced from copyright-cleared materials. Forecasts reflect public sentiment, not the views of the person indexed."*
+- **Non-endorsement notice.** Every NPSI profile displays a conspicuous disclaimer: *"[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. Forecasts reflect public sentiment, not the views of the person indexed."*
 
 ## 14. Limitation of Liability
 
