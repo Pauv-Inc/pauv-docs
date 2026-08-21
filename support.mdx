@@ -1,6 +1,6 @@
 ---
 title: Customer Support
-description: "How to get help with your Pauv account, forecasts, and withdrawals."
+description: "How to get help with your Pauv account, trades, and withdrawals."
 ---
 
 ## Contact Us
@@ -8,7 +8,7 @@ description: "How to get help with your Pauv account, forecasts, and withdrawals
 <Card title="Email Support" icon="envelope">
   **support@pauv.com**
 
-  Our primary support channel for all account inquiries, forecast questions, and technical issues.
+  Our primary support channel for all account inquiries, trading questions, and technical issues.
 </Card>
 
 ## Hours & Response Times
@@ -25,7 +25,7 @@ Inquiries related to the following are treated as **Priority Escalations** and t
 
 - Unauthorized account access or suspected fraud
 - Account lockouts
-- Deposit not credited after on-chain confirmation
+- Deposit not credited
 - Withdrawal questions
 - Account security concerns
 
@@ -38,7 +38,7 @@ If you suspect unauthorized access to your **Pauv account**:
     Send an email to **support@pauv.com** with **"URGENT: ACCOUNT SECURITY"** or **"URGENT: FRAUD"** in the subject line.
   </Step>
   <Step title="Account freeze">
-    Upon receipt, your account and on-platform balance will be **temporarily frozen** to prevent unauthorized activity.
+    Upon receipt, your account and balance will be **temporarily frozen** to prevent unauthorized activity.
   </Step>
   <Step title="Deposit & withdrawal suspension">
     All deposit and withdrawal capabilities for the affected account are suspended during investigation.
@@ -48,23 +48,19 @@ If you suspect unauthorized access to your **Pauv account**:
   </Step>
 </Steps>
 
-<Warning>
-  Pauv cannot recover funds lost due to a compromised wallet. Protect your wallet's recovery phrase the way you would protect the keys to your bank account.
-</Warning>
-
 ## Self-Service Resources
 
 Before contacting support, check if your question is answered in our documentation:
 
 <CardGroup cols={2}>
   <Card title="How It Works" icon="circle-info" href="/how-it-works">
-    The NPSI, forecasts, and VBC 4.1
+    The NPSI, trading up and down, and VBC 4.1
   </Card>
-  <Card title="Funds" icon="wallet" href="/platform/funds">
-    Deposits, on-platform balance, and withdrawals
+  <Card title="Funds" icon="money-bill" href="/platform/funds">
+    Deposits, your balance, and withdrawals
   </Card>
-  <Card title="Forecasting" icon="arrow-trend-up" href="/platform/forecasting">
-    How to open and close forecasts
+  <Card title="Trading" icon="arrow-trend-up" href="/platform/trading">
+    How to open and close positions
   </Card>
   <Card title="Refund Policy" icon="rotate-left" href="/legal/refund-policy">
     When refunds apply and how to request one
@@ -75,24 +71,24 @@ Before contacting support, check if your question is answered in our documentati
 
 <AccordionGroup>
   <Accordion title="How long do withdrawals take?">
-    Withdrawals are processed **automatically** — there is no manual review. Once you press withdraw, arrival time depends on the payout method you choose: USDC on Solana arrives once the transaction confirms on-chain, and fiat payouts arrive on the timeline of the payout rail you selected.
+    Withdrawals are automatic. Press withdraw and it processes with no manual review.
   </Accordion>
   <Accordion title="My deposit hasn't shown up yet. What do I do?">
-    Crypto deposits — any token, on any network — are credited automatically once confirmed on-chain. Fiat deposits are credited once the payment is processed. If a confirmed deposit has not been credited, contact support with the transaction details.
+    Deposits through Glide are credited automatically. If a completed deposit has not been credited, contact support with your Glide transaction reference.
   </Accordion>
-  <Accordion title="Do I need to verify my identity?">
-    Identity verification (KYC) is required for **all fiat deposits** and is performed by **Veriff** through our Soap Payments gateway. You complete it once, before your first fiat deposit. Crypto deposits do not require identity verification.
+  <Accordion title="Can I transfer my balance or positions to someone else?">
+    No. Balances and positions are not transferable to other users. To move funds, withdraw from your account.
   </Accordion>
-  <Accordion title="Can I transfer my balance or forecasts to someone else?">
-    No. On-platform balances and positions are not transferable to other users. To move funds, withdraw to your own wallet.
+  <Accordion title="What happens if the NPSI moves against my trade?">
+    The NPSI is driven entirely by trading activity through VBC 4.1. If the market moves against you, closing your position will return less than you committed. A short is automatically liquidated if the NPSI rises enough that the buy-back cost reaches 95% of the position's escrow; whatever remains of the escrow after the buy-back is returned to you. Pauv does not offer refunds for NPSI movement or liquidations. See our [Refund Policy](/legal/refund-policy).
   </Accordion>
-  <Accordion title="What happens if the NPSI moves against my forecast?">
-    The NPSI is driven entirely by forecasting activity through VBC 4.1. If forecasting pushes the index against you, closing your forecast will return less than you committed. A Negative Forecast can be automatically liquidated at zero return if the NPSI rises enough that the buy-back cost reaches the position's liquidation threshold. Pauv does not offer refunds for NPSI movement or liquidations. See our [Refund Policy](/legal/refund-policy).
+  <Accordion title="How does the referral program work?">
+    Refer a friend and you collect **100% of the trading fees on their first 100 trades**, credited to your balance in real time. See [Referral Program](/platform/referrals).
   </Accordion>
   <Accordion title="I'm a public figure. How do I claim my NPSI profile?">
-    Visit your NPSI profile on pauv.com and select **Claim Your Profile**. Our team will verify your identity and you can choose to direct your good-faith royalty to a verified Solana wallet (paid in USDC) or to a verified 501(c)(3) charity. See [For Public Figures](/platform/for-talent).
+    Visit your profile on pauv.com and select **Claim Your Profile**. Our team confirms your identity, and you begin receiving a share of the trading activity on your profile. See [For Public Figures](/platform/for-talent).
   </Accordion>
   <Accordion title="How do I get a public figure listed?">
-    Anyone can submit a public figure to be listed, and public figures (or their authorized representatives) can request their own listing. Either way, Pauv reviews and approves before the profile goes live. See [For Public Figures](/platform/for-talent).
+    Anyone can suggest a public figure. Pauv reviews and decides before the profile goes live. See [For Public Figures](/platform/for-talent).
   </Accordion>
 </AccordionGroup>

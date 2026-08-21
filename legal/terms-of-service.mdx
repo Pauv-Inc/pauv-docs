@@ -1,9 +1,9 @@
 ---
 title: Terms of Service
-description: "Pauv Inc. Terms of Service - last updated May 2026."
+description: "Pauv Inc. Terms of Service - last updated August 2026."
 ---
 
-*Last Updated: May 18, 2026*
+*Last Updated: August 21, 2026*
 
 <Warning>
   **IMPORTANT NOTICE:** These Terms contain a **binding arbitration provision** and **class action waiver**. Please read carefully.
@@ -15,64 +15,57 @@ By creating an account, accessing, or using pauv.com (the "Platform"), you agree
 
 ## 2. Eligibility
 
-- **General Users (Forecasters):** You must be at least 18 years old and a resident of the United States.
-- **Claims by Public Figures:** An individual whose NPSI profile exists on the Platform may claim that profile to direct the good-faith royalty.
+- **General Users (Traders):** You must be at least 18 years old. The Platform is available in 150+ countries.
 - **No Minors.** The Platform does not list NPSI profiles for individuals under 18. Only adult public figures are indexed.
 
 ## 3. Nature of the Platform
 
-Pauv is the world's first real-time index of public sentiment. The Platform hosts the **Net Public Sentiment Index (NPSI)**, a live, dollar-denominated measure of a public figure's cultural relevance, shaped entirely by forecasting activity on the Platform.
+Pauv is the world's first real-time index of public sentiment. The Platform hosts the **Net Public Sentiment Index (NPSI)**, a live, dollar-denominated measure of a public figure's cultural relevance, shaped entirely by trading activity on the Platform.
 
 - **Not an exchange.** Pauv is not a stock exchange, securities exchange, commodities exchange, prediction market, or a bank.
-- **Not a financial instrument.** An NPSI is a derived data product, similar to a bond rating or credit score. Forecasts opened on an NPSI do not represent ownership, equity, debt, profit participation, voting rights, rights to services, or any claim on any person or enterprise.
+- **Not a financial instrument.** An NPSI is a derived data product, similar to a bond rating or credit score. Trades opened on an NPSI do not represent ownership, equity, debt, profit participation, voting rights, rights to services, or any claim on any person or enterprise.
 - **Signal market.** Pauv occupies a category it calls the signal market, distinct from prediction markets (binary settlement) and securities markets (ownership).
 
 ## 4. Beta Status
 
 The Platform is currently in **beta** while we ensure the stability of our pricing engine. Features may change, and bugs may occur. Any confirmed balance error is corrected as described in the [Refund Policy](/legal/refund-policy).
 
-## 5. Forecasts and VBC 4.1
+## 5. Trades and VBC 4.1
 
-- **Forecasts.** A forecast is a directional view on an NPSI expressed through Pauv's proprietary pricing engine, **VBC 4.1**, a single-curve bonding model with a softplus price floor. A **Positive Forecast** pulls the NPSI up; an escrow-backed **Negative Forecast** pulls it down.
-- **Negative Forecast liquidation.** Negative Forecasts are fully collateralized by an on-platform escrow equal to twice the user's net stake. A Negative Forecast is automatically closed if the cost to buy back its tokens reaches the position's liquidation threshold; at that point the user's return is zero. The liquidation threshold is shown on the position before it is opened and may tighten at low NPSI prices for book-stability reasons. A user cannot lose more than the net stake committed to a Negative Forecast, but may lose all of it in a sharp adverse move of the NPSI.
-- **No counterparty matching.** All forecasts settle instantly against VBC 4.1. There is no order book, no bid/ask, no secondary market, and no user-to-user matching.
-- **No ownership.** Opening a forecast does not give you ownership of the NPSI, the public figure, or any enterprise. The NPSI is a signal, not an asset.
-- **No borrowing; no leverage.** Negative Forecasts do not borrow tokens or funds from other users. Both legs of the escrow originate from the user's net stake and capital extracted from the curve itself. Pauv does not offer margin, lending, or leveraged forecasts.
+- **Trades.** A trade is a directional position on an NPSI expressed through Pauv's proprietary pricing engine, **VBC 4.1**, a single-curve bonding model with a softplus price floor. A **long** trade pulls the NPSI up; an escrow-backed **short** trade pulls it down. Token supply is variable and minted on the curve; there is no fixed or pre-minted per-profile inventory.
+- **Short liquidation.** Shorts are fully collateralized by an on-platform escrow equal to twice the user's net stake. A short is automatically closed if the cost to buy back its tokens reaches 95% of the position's escrow; at that point, whatever remains of the escrow after the buy-back is returned to the user. A user cannot lose more than the net stake committed to a short, but may lose nearly all of it in a sharp adverse move of the NPSI.
+- **No counterparty matching.** All trades settle instantly against VBC 4.1. There is no order book, no bid/ask, no secondary market, and no user-to-user matching.
+- **No ownership.** Opening a trade does not give you ownership of the NPSI, the public figure, or any enterprise. The NPSI is a signal, not an asset.
+- **No borrowing; no leverage.** Shorts do not borrow tokens or funds from other users. Both legs of the escrow originate from the user's net stake and capital extracted from the curve itself. Pauv does not offer margin, lending, or leveraged trades.
 - **Internal positions.** VBC 4.1 uses internal token accounting, but users do not directly interact with tokens. Positions are platform records; they are not cryptocurrency, not transferable, and have no value outside the Platform.
-- **Algorithmic pricing.** NPSI values are determined solely by forecasting activity through the published VBC 4.1 algorithm. The starting values of the original 101 NPSI profiles were set through Elo-based ranking by beta users; new profiles are seeded through Elo-Based Comparative Pricing.
+- **Algorithmic pricing.** NPSI values are determined by trading activity through the published VBC 4.1 algorithm. A new profile's starting value is priced from public signal data (Google Trends, Instagram follower counts, and other social metrics), then anchored against existing profiles trading in a similar price range; from there the market self-corrects.
 
 ## 6. Funds, Deposits, and Withdrawals
 
-- **On-platform balance.** Your "balance" is an internal ledger entry displayed in U.S. dollars, credited at the U.S. dollar value of your deposits. It cannot be transferred to other users, but you may withdraw it at any time.
-- **Funding.** The Platform accepts (a) crypto deposits in any token on any network, processed through our payment gateway Soap Payments via **Glide**, and (b) fiat deposits by card or bank transfer, processed by **AptPay** and held in a regulated **FBO custodial account**.
-- **Fiat verification.** All fiat deposits require identity verification (KYC), performed by **Veriff** through the Soap Payments gateway. You must provide accurate, current, and complete information. Crypto deposits do not require identity verification.
-- **Withdrawals.** You may withdraw your on-platform balance at any time. Withdrawals are processed automatically; delivery time depends on the payout method you select. Crypto withdrawals are sent as USDC on Solana to the wallet connected to your account; fiat payouts are processed by AptPay.
-- **Wallet responsibility.** You are responsible for safeguarding the private keys and recovery materials of any wallet you connect to your account. Pauv cannot recover funds lost due to a compromised, lost, or misconfigured wallet, nor funds sent in the wrong token or on the wrong network.
-- **No transfers.** You may not sell, gift, transfer, or trade your on-platform balance or open forecasts to other users directly. Peer-to-peer transfers are strictly disabled.
+- **Balance.** Your "balance" is an internal ledger entry displayed in U.S. dollars, credited 1:1 with your deposits. It cannot be transferred to other users, but you may withdraw it at any time.
+- **Funding.** Deposits are made through our payment partner, **Glide**, and credited to your balance in U.S. dollars.
+- **Withdrawals.** You may withdraw your balance at any time. Withdrawals are processed automatically, with no manual review.
+- **No transfers.** You may not sell, gift, transfer, or trade your balance or open positions to other users directly. Peer-to-peer transfers are strictly disabled.
 
 ## 7. Account Registration & Security
 
 - **Account creation.** You must provide a name and an email address to create an account.
-- **Wallet linkage.** Crypto deposits and crypto withdrawals are tied to the Solana wallet you have connected. You may update the connected wallet from your account settings.
-- **Security.** You are responsible for maintaining the confidentiality of your login credentials, the security of your connected wallet, and for all activity under your account.
+- **Security.** You are responsible for maintaining the confidentiality of your login credentials and for all activity under your account.
 - **Monitoring.** We reserve the right to suspend accounts, delay withdrawals, or terminate access for activity that is harmful to other users, to the integrity of the NPSI, or to the Platform.
 
 ## 8. Fees
 
-- **Standard fee.** Every forecast (open or close) incurs a total fee of **1.8%** on the gross cash amount: **1.3%** to Pauv and **0.5%** to a good-faith royalty set aside for the public figure associated with the NPSI. The same 1.8% rate applies to the residual escrow returned on a closed or liquidated Negative Forecast.
+- **Standard fee.** Every trade (open or close) incurs a fee of **0.25%** on the gross cash amount. The same rate applies to the residual escrow returned on a closed or liquidated short.
 - **Fee isolation.** Fees are collected into a separate treasury ledger and do not enter the bonding curve. Fees do not affect the NPSI value or pricing math.
-- **Round-trip cost.** A user who opens and immediately closes a forecast pays approximately 3.57% in total fees, the compounded effect of paying 1.8% on both legs.
 
-## 9. Good-Faith Royalty and Claim System
+## 9. Profile Claims
 
-- **Purpose.** The 0.5% good-faith royalty is a set-aside for the public figure associated with the NPSI. It is not a salary, dividend, passive income, revenue share, or payment for services.
-- **Claim flow.** Every NPSI profile includes a "Claim Your Profile" feature. A public figure whose claim is approved by Pauv may direct accrued and future royalties to a Solana wallet they control (paid in USDC) or to a verified 501(c)(3) charity (paid in U.S. dollars).
+- **Claim flow.** Every NPSI profile includes a "Claim Your Profile" feature. A public figure whose claim is approved by Pauv receives a share of the trading activity on that profile from the point of approval going forward.
 - **No endorsement.** Claiming a profile does not constitute endorsement of, affiliation with, or authorization of Pauv, and does not grant Pauv any rights to the Name, Image, or Likeness of the public figure.
-- **Unclaimed funds.** Royalties that remain unclaimed through the state-mandated dormancy period are remitted to the applicable State Controller's office under escheatment laws.
 
 ## 10. Listings
 
-Listings on the Platform are approval-gated. Users may submit a public figure to be listed, and public figures (or their authorized representatives) may request their own listing. In either case, Pauv reviews and decides whether to list. Pauv does not list private individuals or individuals under 18.
+Listings on the Platform are approval-gated. Users may suggest a public figure for listing; Pauv reviews and decides whether to list. Pauv does not list private individuals or individuals under 18.
 
 ## 11. Prohibited Conduct
 
@@ -80,25 +73,24 @@ You agree not to:
 
 - Use the Platform to facilitate any illegal activity.
 - Use bots, spiders, or automated scripts to interact with the Platform.
-- Engage in coordinated schemes intended to manipulate an NPSI value (including but not limited to wash forecasting or rapid round-trip forecasting designed to manipulate fee or price outcomes).
-- Attempt to transfer your on-platform balance or open positions outside of the Platform.
+- Engage in coordinated schemes intended to manipulate an NPSI value (including but not limited to wash trading or rapid round-trip trading designed to manipulate fee or price outcomes).
+- Attempt to transfer your balance or open positions outside of the Platform.
 - Represent any public figure's NPSI as an investment, security, or endorsement.
 
 ## 12. Risk Disclosure & Disclaimers
 
-**YOU ACKNOWLEDGE THAT OPENING AND CLOSING FORECASTS ON PAUV CARRIES RISK OF LOSS.**
+**YOU ACKNOWLEDGE THAT OPENING AND CLOSING TRADES ON PAUV CARRIES RISK OF LOSS.**
 
-- **Not an investment.** Forecasts are opened for entertainment and signal purposes. Pauv does not provide financial, tax, legal, or investment advice.
-- **NPSI movement.** The NPSI can move sharply in either direction based on forecasting activity. You can lose some or all of the funds committed to a forecast.
-- **Automatic liquidation of Negative Forecasts.** A Negative Forecast is automatically closed when the cost to buy back its tokens reaches the position's liquidation threshold. You acknowledge that a sharp upward move of the NPSI can trigger this liquidation with no advance notice, resulting in a total loss of the net stake committed to that Negative Forecast.
+- **Not an investment.** Pauv does not provide financial, tax, legal, or investment advice.
+- **NPSI movement.** The NPSI can move sharply in either direction based on trading activity. You can lose some or all of the funds committed to a trade.
+- **Automatic liquidation of shorts.** A short is automatically closed when the cost to buy back its tokens reaches 95% of the position's escrow. You acknowledge that a sharp upward move of the NPSI can trigger this liquidation with no advance notice; whatever remains of the escrow after the buy-back is returned, which may be only a small remainder of the net stake committed to that short.
 - **Beta software.** The Platform is in beta. You acknowledge that bugs in the pricing engine could in principle cause incorrect balance calculations; any confirmed error is corrected as described in the [Refund Policy](/legal/refund-policy).
-- **Crypto risk.** Cryptocurrency deposits and withdrawals carry network-level risks (network outages, congestion, stablecoin de-pegging, smart-contract risk) that are outside Pauv's control.
 - **"As is" service.** The Platform is provided "as is" and "as available" without warranties of any kind.
 
 ## 13. Public-Domain Framing and Non-Endorsement
 
 - **NPSI derives from public sentiment.** NPSI profiles exist because public sentiment about a cultural figure is in the public domain. Listing an NPSI does not require consent from the indexed individual, and the Platform expressly does not claim to use any public figure's Name, Image, or Likeness.
-- **Non-endorsement notice.** Every NPSI profile displays a conspicuous disclaimer: *"[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. Forecasts reflect public sentiment, not the views of the person indexed."*
+- **Non-endorsement notice.** Every NPSI profile displays a conspicuous disclaimer: *"[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. All imagery is copyright-free or AI-generated."*
 
 ## 14. Limitation of Liability
 

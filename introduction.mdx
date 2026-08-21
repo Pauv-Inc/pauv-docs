@@ -5,20 +5,20 @@ description: "Core concepts, key features, and how everything fits together on P
 
 ## Core Concepts
 
-- **NPSI (Net Public Sentiment Index)**: A live, dollar-denominated measure of a public figure's cultural relevance. Every public figure on Pauv has one. The NPSI is shaped entirely by forecasting activity.
-- **Positive Forecast**: A position on the NPSI indicating the user believes the figure's cultural relevance will rise. Pulls the NPSI up.
-- **Negative Forecast**: An escrow-backed position on the NPSI indicating the user believes the figure's cultural relevance will fall. Pulls the NPSI down. Automatically closed if the NPSI rises enough that the buy-back cost reaches the liquidation threshold of the position's escrow.
-- **VBC 4.1 (Valence Bonding Curve)**: Pauv's proprietary pricing engine. A single continuous bonding curve with a softplus price floor, driven in opposite directions by Positive and Negative Forecasts. Settles every forecast instantly with no counterparty.
-- **Good-faith royalty**: 0.5% of every forecast transaction, set aside for the public figure whose NPSI is being forecasted. Claimable to a verified Solana wallet, donatable to a verified 501(c)(3), or escheated to the state.
-- **Balance**: Your on-platform USD-denominated balance, funded by depositing crypto (any token, any network) or fiat (card or bank transfer). Withdraw at any time.
+- **NPSI (Net Public Sentiment Index)**: A live, dollar-denominated measure of a public figure's cultural relevance. Every public figure on Pauv has one. In everyday use we just call it a person's **Sentiment**. Once a profile's starting value is set, the NPSI is shaped entirely by trading activity.
+- **Trading up and down**: You can go **long** (you believe a figure's cultural relevance will rise — pushes the NPSI up) or **short** (you believe it will fall — pushes the NPSI down). Shorts are escrow-backed and are automatically liquidated if the cost to buy back the position reaches 95% of its escrow.
+- **VBC 4.1 (Valence Bonding Curve)**: Pauv's proprietary pricing engine. A single continuous bonding curve with a softplus price floor, driven in opposite directions by long and short trades. Settles every trade instantly with no counterparty.
+- **Balance**: Your USD balance, funded through Glide and credited 1:1 with your deposits. Withdraw at any time.
 
 ## Key Features
 
-- **Continuous signal**: The NPSI is live and always on. It has a floor at zero and no ceiling, moving in real time as users open and close forecasts.
-- **Instant settlement**: Every forecast is priced and settled instantly by VBC 4.1. No order book, no counterparty matching, no liquidity requirements.
-- **Two-sided expression**: Users can forecast that cultural relevance will rise (Positive) or fall (Negative). Both directions drive the same curve in opposite directions, producing a self-correcting signal.
-- **Flexible funding**: Deposit crypto — any token, on any network — by connecting a wallet via browser extension or QR code, or fund with fiat by card or bank transfer. All fiat deposits require identity verification via Veriff.
-- **Non-transferable positions**: Your on-platform balance is used to open and close forecasts. Forecasts and positions cannot be transferred to other users.
+- **Continuous signal**: The NPSI is live and always on. It has a floor at zero and no ceiling, moving in real time as users open and close positions.
+- **Instant settlement**: Every trade is priced and settled instantly by VBC 4.1. No order book, no counterparty matching, no liquidity requirements.
+- **Long and short**: Trade up if you think cultural relevance will rise, or down if you think it will fall. Both directions drive the same curve in opposite directions, producing a self-correcting signal.
+- **Simple funding**: Deposit through **Glide** and your balance is credited in U.S. dollars. Withdraw at any time, automatically.
+- **Referral program**: Refer a friend and collect **100% of the trading fees on their first 100 trades**, credited to your balance in real time. See [Referral Program](/platform/referrals).
+- **Auto-Spread**: By default, 95% of an order goes to the person you selected and 5% is spread across that profile's industry or subindustry. Adjust the split up to 70/30, or turn it off. See [Trading](/platform/trading#auto-spread).
+- **Non-transferable positions**: Your balance is used to open and close positions. Positions cannot be transferred to other users.
 
 ## What Pauv Is Not
 
@@ -26,9 +26,9 @@ Pauv occupies a category it calls the **signal market**, distinct from any other
 
 | Pauv Is Not | Why |
 |-------------|-----|
-| A stock exchange or securities market | Forecasts are not ownership, equity, debt, or investment contracts. |
+| A stock exchange or securities market | Trades are not ownership, equity, debt, or investment contracts. |
 | A prediction market | There are no binary outcomes, no event-based settlement, and no expiration. |
 | A meme coin platform or NFT marketplace | NPSI positions are internal records and are not transferable on-chain. |
-| A crowdfunding or creator monetization tool | Users are not funding projects. Forecasts measure perception, not intent. |
+| A crowdfunding or creator monetization tool | Users are not funding projects. Trades measure perception, not intent. |
 
 Pauv's official industry category is **Technology, Information, and Internet**.

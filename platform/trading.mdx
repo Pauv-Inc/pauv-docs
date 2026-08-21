@@ -1,0 +1,87 @@
+---
+title: Trading
+description: "How to trade up or down on a public figure's Sentiment."
+---
+
+## What Is a Trade?
+
+A **trade** is a directional position on a public figure's cultural relevance, expressed through their NPSI — their **Sentiment**. You open a position against Pauv's pricing engine, VBC 4.1, that moves the live index value up or down.
+
+| Direction | What It Means |
+|-----------|---------------|
+| **Up (long)** | You believe the figure's cultural relevance will rise. Pushes the NPSI up. |
+| **Down (short)** | You believe the figure's cultural relevance will fall. Pushes the NPSI down. |
+
+## Opening a Trade
+
+<Steps>
+  <Step title="Pick a person">
+    Browse profiles on Pauv. Every public figure on the platform has an NPSI, a live, dollar-denominated measure of their cultural relevance.
+  </Step>
+  <Step title="Choose up or down">
+    Decide whether you think the person's Sentiment is undervalued (go long) or overvalued (go short).
+  </Step>
+  <Step title="Enter a dollar amount">
+    Enter the amount, in dollars, you want to commit from your balance. The 0.25% fee is deducted and the remainder enters the curve as your net stake.
+  </Step>
+  <Step title="Settlement is instant">
+    VBC 4.1 settles your trade immediately. There is no order book, no counterparty, and no waiting.
+  </Step>
+</Steps>
+
+## Going Long
+
+A long is an **upward position** on the NPSI. Your net stake enters the curve and pushes the index up. You receive an internal token position sized by the curve's integral between the old and new state.
+
+When you sell, your tokens are reversed back down the curve and the proceeds are credited to your balance. If the NPSI rose while you held the position, you receive more than you committed; if it fell, you receive less.
+
+## Going Short
+
+A short is an **escrow-backed downward position** on the NPSI. No tokens are borrowed from other users. Instead:
+
+1. Your net stake is matched dollar-for-dollar by an equal amount extracted from the curve.
+2. Both amounts are held in an **escrow** equal to twice your net stake.
+3. The extraction lowers the curve, which lowers the NPSI.
+
+When you close, the escrow is used to buy the same number of tokens back along the curve. Whatever remains of the escrow after the buy-back is returned to your balance as your net proceeds, minus the 0.25% fee.
+
+- If the NPSI fell: the buy-back costs less than your net stake. You receive more than you committed.
+- If the NPSI rose: the buy-back costs more than your net stake. You receive less.
+
+<Warning>
+  **Liquidation risk.** A short is automatically closed if its buy-back cost reaches **95% of its escrow**. When that happens, whatever remains of the escrow after the buy-back is returned to you. You cannot lose more than your net stake, but you can lose nearly all of it in a sharp adverse move of the NPSI. Size shorts accordingly.
+</Warning>
+
+## Auto-Spread
+
+By default, **95% of your order goes to the person you selected** and the remaining **5% is spread across that profile's industry or subindustry**. Auto-Spread smooths your exposure across the figure's peer group.
+
+You can adjust the split up to **70/30**, or turn Auto-Spread off entirely from the trade panel.
+
+## Closing a Trade
+
+When you are ready to exit, close your position. For a long, your tokens are sold back to the curve. For a short, the escrow buys your tokens back from the curve. VBC 4.1 calculates your gross proceeds, the 0.25% fee is deducted, and the net payout is credited to your balance.
+
+If you open a trade and immediately close it with no other activity, you receive approximately your original amount in gross proceeds, minus the fees on each leg.
+
+## Fees
+
+Every leg — open and close — incurs a **0.25%** fee on the gross cash amount. See [How It Works](/how-it-works#fees) for full detail.
+
+## Why Both Directions Matter
+
+Prior platforms that tried to quantify attention on people (BitClout and Friend.tech among them) offered only one direction. That made their indices one-sided and manipulable. VBC 4.1 runs longs and shorts on the same curve in opposite directions, producing a more accurate, self-correcting signal. When the NPSI drifts away from what the market believes is accurate, there is an incentive to push it back in either direction.
+
+## Important Rules
+
+- **No peer-to-peer transfers.** Balances and positions cannot be sent to other users.
+- **No off-platform trading.** Internal positions are platform records, not on-chain assets. They cannot be moved off Pauv.
+- **No borrowing.** Shorts are fully collateralized by escrow. Nothing is borrowed from other users, and you can never owe more than your net stake.
+- **No leverage.** You can only commit funds from your balance. There is no margin.
+- **Volatility.** The NPSI can move sharply. A short can be auto-liquidated with only a small remainder returned if the NPSI rises enough. A long can lose most of its value if the NPSI falls.
+
+## Required Disclosures
+
+Every NPSI profile displays:
+
+> *[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. All imagery is copyright-free or AI-generated.*

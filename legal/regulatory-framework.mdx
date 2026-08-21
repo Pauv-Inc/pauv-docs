@@ -3,35 +3,31 @@ title: Regulatory Framework
 description: "How Pauv's Platform and the NPSI are classified under federal and state law."
 ---
 
-This page summarizes Pauv's regulatory posture at a high level. Pauv operates consistent with applicable federal and state law, supported by legal opinions from qualified outside counsel.
+This page summarizes Pauv's regulatory posture at a high level. Pauv operates consistent with applicable federal and state law, supported by legal opinions from qualified outside counsel. Pauv Inc. is a FinCEN-registered Money Services Business (MSB).
 
 ## Public Sentiment Is Public Domain
 
-Pauv hosts the **Net Public Sentiment Index (NPSI)**: a live, dollar-denominated measure of a public figure's cultural relevance, shaped entirely by forecasting activity. The NPSI is a **derived data product**, similar to a bond rating or a credit score.
+Pauv hosts the **Net Public Sentiment Index (NPSI)**: a live, dollar-denominated measure of a public figure's cultural relevance, shaped entirely by trading activity. The NPSI is a **derived data product**, similar to a bond rating or a credit score.
 
 How the public perceives a cultural figure is **in the public domain**. It is distinct from the figure's Name, Image, or Likeness, which belongs to that individual. The NPSI quantifies the public's reaction to a figure, not the figure's identity.
 
 Under established precedent (*CBC Distribution and Marketing v. Major League Baseball Advanced Media*, 505 F.3d 818 (8th Cir. 2007)), factual data points about public figures, including measures of cultural trajectory and performance, are in the public domain. Pauv does not "use" any public figure's identity; it indexes the public's reaction to that figure.
 
-<Note>
-  Because public sentiment is public domain, no consent is required to list an NPSI. The claim flow exists solely to direct the good-faith royalty, not to grant permission for listing.
-</Note>
+## Trades Are Not Securities
 
-## Forecasts Are Not Securities
-
-Forecasts opened on an NPSI have been analyzed under the **Howey test** (the standard framework for determining whether an instrument is an "investment contract" under federal securities law) and **do not** constitute securities.
+Trades opened on an NPSI have been analyzed under the **Howey test** (the standard framework for determining whether an instrument is an "investment contract" under federal securities law) and **do not** constitute securities.
 
 ### Key Factors
 
-- **No common enterprise.** Each NPSI is priced by a deterministic, published algorithm (VBC 4.1, a single-curve softplus bonding model). The mathematical rigidity of the bonding curve removes any "common enterprise" element: the index value is a direct measurement of forecasting activity, not a product of centrally managed returns.
-- **No managerial efforts.** The NPSI value is driven entirely by user forecasting activity. Pauv does not make managerial decisions that affect the value of any NPSI. Public figures have no role in setting, supporting, or promoting their NPSI value.
+- **No common enterprise.** Each NPSI is priced by a deterministic, published algorithm (VBC 4.1, a single-curve softplus bonding model). The mathematical rigidity of the bonding curve removes any "common enterprise" element: the index value is a direct measurement of trading activity, not a product of centrally managed returns.
+- **No managerial efforts.** The NPSI value is driven entirely by user trading activity. Pauv does not make managerial decisions that affect the value of any NPSI. Public figures have no role in setting, supporting, or promoting their NPSI value.
 - **No ownership or profit participation.** Users do not acquire equity, debt, voting rights, dividend rights, or any interest in a business venture or in any individual.
-- **Signal, not asset.** The NPSI is a measure of public perception, not something users "own" or "hold." Users open and close forecasts; they do not hold tradable assets.
+- **Signal, not asset.** The NPSI is a measure of public perception, not something users "own" or "hold." Users open and close positions; they do not hold tradable assets.
 
 ### Comparison to Similar Instruments
 
-| Feature | NPSI Forecasts | Prediction-Market Contracts | Securities |
-|---------|----------------|------------------------------|------------|
+| Feature | NPSI Trades | Prediction-Market Contracts | Securities |
+|---------|-------------|------------------------------|------------|
 | Binary settlement / event expiry | No | Yes | Varies |
 | Confers ownership or profit rights | No | No | Yes |
 | Value driven by managerial effort | No | No | Yes |
@@ -53,13 +49,13 @@ Pauv operates a new category called the **signal market**, distinct from both pr
 
 ## Not Subject to CFTC Registration
 
-Pauv's activity is limited to forecasts priced by a deterministic bonding curve using an internal USD-denominated balance. The Platform does not offer:
+Pauv's activity is limited to trades priced by a deterministic bonding curve using an internal USD-denominated balance. The Platform does not offer:
 
 - Futures, options, swaps, or perpetual contracts
-- Leveraged, margined, or financed forecasts
+- Leveraged, margined, or financed trades
 - Derivatives of any kind
 
-Negative Forecasts under VBC 4.1 are not short sales of any security, commodity, or asset. No external instrument is borrowed or sold; the Negative Forecast is fully collateralized on-platform by an escrow funded entirely from the user's net stake and capital extracted from the same bonding curve. The automatic liquidation rule is a deterministic closing rule implemented in the published algorithm, not a margin call or lender recall.
+Short positions under VBC 4.1 are not short sales of any security, commodity, or asset. No external instrument is borrowed or sold; the short is fully collateralized on-platform by an escrow funded entirely from the user's net stake and capital extracted from the same bonding curve. The automatic liquidation rule is a deterministic closing rule implemented in the published algorithm, not a margin call or lender recall.
 
 Therefore, CFTC registration requirements do not apply. The Platform's published pricing algorithm and instant on-platform settlement further mitigate fraud and manipulation risks.
 
@@ -67,35 +63,28 @@ Therefore, CFTC registration requirements do not apply. The Platform's published
 
 The NPSI quantifies **public sentiment** about a cultural figure — a public-domain data point distinct from the figure's Name, Image, or Likeness, which belongs to that individual.
 
-Under established precedent (*CBC Distribution and Marketing v. Major League Baseball Advanced Media*, 505 F.3d 818 (8th Cir. 2007)), factual data about public figures is in the public domain. An NPSI profile identifies a public-domain data product; it is not a commercial exploitation of any individual's identity, and Pauv claims no rights to any public figure's Name, Image, or Likeness.
+Under established precedent (*CBC Distribution and Marketing v. Major League Baseball Advanced Media*, 505 F.3d 818 (8th Cir. 2007)), factual data about public figures is in the public domain. An NPSI profile identifies a public-domain data product; it is not a commercial exploitation of any individual's identity, and Pauv claims no rights to any public figure's Name, Image, or Likeness. All profile imagery on the Platform is copyright-free or AI-generated.
 
 ## Lanham Act: Non-Endorsement
 
 To prevent any "False Endorsement" claim under the Lanham Act, the Platform's user interface ensures no reasonable consumer would believe a public figure has authorized their NPSI listing:
 
 - Every NPSI profile carries a conspicuous non-endorsement disclaimer.
-- Platform copy avoids language like "Buy," "Invest in," or "Official Profile."
 - All profiles are titled as NPSI profiles, reinforcing that they are derived data products.
 
 The required disclaimer reads:
 
-> *[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. Forecasts reflect public sentiment, not the views of the person indexed.*
-
-## Good-Faith Royalty (MLC Analogue)
-
-The 0.5% good-faith royalty set aside for public figures mirrors the **Mechanical Licensing Collective (MLC)** framework established by the Music Modernization Act. By setting aside royalties in a transparent, audited ledger, Pauv fulfills a duty of care that exceeds the standard for news organizations or fantasy-sports platforms.
-
-Unclaimed royalties are held for the state-mandated dormancy period (typically 3 to 5 years) and then remitted to the applicable State Controller's office under established **escheatment laws**.
+> *[Name] is not affiliated with Pauv and has not endorsed, sponsored, or authorized this NPSI listing. All imagery is copyright-free or AI-generated.*
 
 ## Not a Securities Exchange, Broker-Dealer, or ATS
 
-Because forecasts are not securities, Pauv does not operate as:
+Because trades on the NPSI are not securities, Pauv does not operate as:
 
 - A securities exchange
 - A broker or dealer
 - An alternative trading system (ATS)
 
-All forecasts are settled against VBC 4.1 within Pauv's own system. There is no user-to-user matching, no bid/ask spread, and no linkage to national market systems.
+All trades are settled against VBC 4.1 within Pauv's own system. There is no user-to-user matching, no bid/ask spread, and no linkage to national market systems.
 
 <Note>
   This summary is for informational purposes only and does not constitute legal advice.

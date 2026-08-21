@@ -1,54 +1,54 @@
 ---
 title: How It Works
-description: "The NPSI, Positive and Negative Forecasts, and VBC 4.1."
+description: "The NPSI, trading up and down, and VBC 4.1."
 ---
 
 ## The Net Public Sentiment Index
 
-Every public figure on Pauv has an **NPSI**: a live, dollar-denominated measure of their cultural relevance. The value is determined solely by forecasting activity on Pauv. There are no social metrics, no algorithmic feeds, and no external data sources pushed into the index.
+Every public figure on Pauv has an **NPSI**: a live, dollar-denominated measure of their cultural relevance — their **Sentiment**. Once a profile's starting value is set, the value is determined solely by trading activity on Pauv: no algorithmic feeds and no external data sources are pushed into a live index.
 
-- **Floor at zero.** No matter how much negative forecasting happens, the NPSI approaches zero asymptotically but never reaches it.
+- **Floor at zero.** No matter how much downward trading happens, the NPSI approaches zero asymptotically but never reaches it.
 - **No ceiling.** The NPSI can grow without bound.
 - **Not an asset.** Users do not own the NPSI. It is a measure of public perception, not a financial instrument.
 
-When a figure drops a hit, wins a title, or goes viral, users react, forecasts get opened, and the NPSI moves in real time.
+When a figure drops a hit, wins a title, or goes viral, users react, trades come in, and the NPSI moves in real time.
 
-## Positive and Negative Forecasts
+## Trading Up and Down
 
-Users interact with Pauv by opening and closing forecasts. A forecast is a directional view on a public figure's cultural relevance, expressed through the NPSI.
+Users interact with Pauv by opening and closing trades. A trade is a directional position on a public figure's cultural relevance, expressed through the NPSI.
 
-| Forecast Type | What It Means | Effect on NPSI |
-|---------------|---------------|----------------|
-| **Positive Forecast** | The user believes the figure's cultural relevance will rise. | Pulls the NPSI value **up**. |
-| **Negative Forecast** | The user believes the figure's cultural relevance will fall. | Pulls the NPSI value **down**. |
+| Direction | What It Means | Effect on NPSI |
+|-----------|---------------|----------------|
+| **Up (long)** | You believe the figure's cultural relevance will rise. | Pulls the NPSI value **up**. |
+| **Down (short)** | You believe the figure's cultural relevance will fall. | Pulls the NPSI value **down**. |
 
 <Steps>
   <Step title="Spot who's moving">
-    Scan the platform, find a figure whose NPSI you think is under- or overvalued, and form your read.
+    Scan the platform, find a figure whose Sentiment you think is under- or overvalued, and form your read.
   </Step>
-  <Step title="Open a forecast">
-    Open a Positive Forecast if you think cultural relevance will rise, or a Negative Forecast if you think it will fall. Forecasts settle instantly, with no counterparty, no contracts, and no outcomes to wait on.
+  <Step title="Place a trade">
+    Go up if you think cultural relevance will rise, or down if you think it will fall. Trades settle instantly, with no counterparty, no contracts, and no outcomes to wait on.
   </Step>
   <Step title="Close when ready">
-    The NPSI moves in real time as other users open forecasts. Close your forecast whenever the story shifts.
+    The NPSI moves in real time as other users trade. Close your position whenever the story shifts.
   </Step>
 </Steps>
 
 ## The Valence Bonding Curve (VBC 4.1)
 
-**VBC 4.1** is Pauv's proprietary pricing engine. Every NPSI is governed by a single continuous bonding curve. There are no separate pools, no order books, no liquidity providers, and no counterparty matching.
+**VBC 4.1** is Pauv's proprietary pricing engine. Every NPSI is governed by a single continuous bonding curve. There are no separate pools, no order books, no liquidity providers, and no counterparty matching. Supply is variable and minted on the curve; there is no fixed or pre-minted per-profile inventory.
 
-Positive Forecasts push the curve up; Negative Forecasts push it down. Both directions use the same published price function, with a softplus floor that guarantees the price stays strictly above zero. The engine analyses every forecast against the full state of the book before it settles, so a single action can't leave any other position underfunded.
+Long trades push the curve up; short trades push it down. Both directions use the same published price function, with a softplus floor that guarantees the price stays strictly above zero. The engine analyses every trade against the full state of the book before it settles, so a single action can't leave any other position underfunded.
 
 <CardGroup cols={2}>
   <Card title="Instant settlement" icon="bolt">
-    No order book. No counterparty matching. Every forecast settles immediately against the curve.
+    No order book. No counterparty matching. Every trade settles immediately against the curve.
   </Card>
   <Card title="Floor guarantee" icon="shield">
     A softplus price function ensures the NPSI approaches zero asymptotically but never reaches or crosses it.
   </Card>
   <Card title="Self-correcting" icon="arrows-rotate">
-    Positive and Negative Forecasts drive the same curve in opposite directions, producing an accurate, two-sided signal.
+    Long and short trades drive the same curve in opposite directions, producing an accurate, two-sided signal.
   </Card>
   <Card title="Always solvent" icon="building-columns">
     Every price move is computed from a published closed-form integral. The engine rejects any action that would leave another position underfunded, so phantom cash cannot enter or leave the system.
@@ -59,54 +59,42 @@ Positive Forecasts push the curve up; Negative Forecasts push it down. Both dire
 
 | Action | Effect on the Curve | NPSI |
 |--------|---------------------|------|
-| Open Positive Forecast | Curve moves up | Rises |
-| Close Positive Forecast | Curve moves down | Falls |
-| Open Negative Forecast | Curve moves down | Falls |
-| Close Negative Forecast | Curve moves up | Rises |
+| Open long | Curve moves up | Rises |
+| Close long | Curve moves down | Falls |
+| Open short | Curve moves down | Falls |
+| Close short | Curve moves up | Rises |
 
-### Positive Forecasts
+### Going Long
 
-Opening a Positive Forecast commits funds to the curve, raising the index. The user receives an internal token position sized by the curve's integral between the old and new state. Closing the position reverses the integral back down the curve and returns the proceeds — a gain if the NPSI rose while the forecast was open, a loss if it fell.
+Opening a long commits funds to the curve, raising the index. The user receives an internal token position sized by the curve's integral between the old and new state. Closing the position reverses the integral back down the curve and returns the proceeds — a gain if the NPSI rose while the position was open, a loss if it fell.
 
-### Negative Forecasts
+### Going Short
 
-Opening a Negative Forecast pushes the curve down through an **escrow-backed mechanism**: the user's net stake is matched dollar-for-dollar by capital extracted from the curve, and both amounts are held in an **escrow** equal to twice the net stake. No tokens are borrowed from other users, no margin is extended, and no additional capital can ever be required from the user. Closing the forecast uses the escrow to buy the tokens back along the curve; whatever remains after the buy-back is returned to the user as their net proceeds.
+Opening a short pushes the curve down through an **escrow-backed mechanism**: the user's net stake is matched dollar-for-dollar by capital extracted from the curve, and both amounts are held in an **escrow** equal to twice the net stake. No tokens are borrowed from other users, no margin is extended, and no additional capital can ever be required from the user. Closing the position uses the escrow to buy the tokens back along the curve; whatever remains after the buy-back is returned to the user as their net proceeds.
 
-- If the NPSI fell while the forecast was open, the buy-back costs less than the net stake and the user receives more than they committed.
-- If the NPSI rose, the buy-back costs more than the net stake and the user receives less — possibly zero.
+- If the NPSI fell while the position was open, the buy-back costs less than the net stake and the user receives more than they committed.
+- If the NPSI rose, the buy-back costs more than the net stake and the user receives less.
 
 <Warning>
-  **Liquidation.** A Negative Forecast is automatically closed if its buy-back cost reaches the liquidation threshold of its escrow. The threshold tightens at low NPSI prices to keep the book stable, and is displayed on the position before you open. When liquidation fires, the user's loss is bounded by their net stake but can equal all of it in a sharp adverse move of the NPSI.
+  **Liquidation.** A short is automatically closed if its buy-back cost reaches **95% of its escrow**. When liquidation fires, whatever remains of the escrow after the buy-back is returned to the user. The user's loss is bounded by their net stake, but can be nearly all of it in a sharp adverse move of the NPSI.
 </Warning>
 
 ### Initial Pricing
 
-When the platform launched, the starting NPSI values for the **original 101 profiles** were set through **Elo-based ranking by beta users**: beta participants ranked profiles head-to-head until the relative ordering stabilized, and the ratings were anchored to dollar values.
+A new profile's starting value is priced from **public signal data** — Google Trends, Instagram follower counts, and other social metrics — and then anchored against existing profiles trading in a similar price range.
 
-For every new profile added after launch, the starting value is set through **Elo-Based Comparative Pricing**: the new profile is shown alongside two existing profiles, and participants rank where they think the new one should land — above, between, or below. Iterating thousands of times with random combinations converges on an accurate starting value.
-
-If the starting value is slightly off at launch, the market self-corrects: forecasting activity pushes the NPSI to where the market believes it belongs.
+From there, the market self-corrects: if the starting value is slightly off, trading activity pushes the NPSI to where the market believes it belongs.
 
 ## Fees
 
-Every forecast, whether opening or closing, incurs a flat **1.8%** fee on the gross cash amount.
+Every trade, whether opening or closing, incurs a flat **0.25%** fee on the gross cash amount. A round trip (open then close) costs roughly **0.5%** in total fees.
 
-| Component | Rate | Recipient |
-|-----------|------|-----------|
-| Platform fee | 1.3% | Pauv |
-| Good-faith royalty | 0.5% | Set aside for the public figure |
-| **Total** | **1.8%** | **Split** |
+Fees are collected into a separate treasury ledger and never enter the bonding curve. They do not affect the NPSI value or the pricing math.
 
-- **Opening a forecast**: The 1.8% fee is deducted from the committed amount; the remaining 98.2% enters the curve as the user's net stake.
-- **Closing a forecast**: The curve calculates gross proceeds; the 1.8% fee is deducted from those proceeds, and the user receives the net payout.
-- **Liquidation**: If a Negative Forecast is auto-closed at the liquidation threshold, any remaining escrow after the buy-back would be reduced by the 1.8% fee before being returned.
+### Referral Program
 
-A round trip in a quiet index (open then close with no other activity) costs approximately **3.57%**: the compounded effect of paying 1.8% on both legs.
-
-## Sentiment Score
-
-Alongside the headline NPSI value, Pauv exposes a **sentiment score**: the net signed dollars committed to the curve. Positive Forecasts contribute positively, Negative Forecasts contribute negatively, and the score is the integral of price over the curve's range. The sentiment score measures capital at stake, while the NPSI value measures how the index is priced.
+Refer a friend and collect **100% of the trading fees on their first 100 trades**, credited to your balance in real time. See [Referral Program](/platform/referrals).
 
 <Note>
-  Forecasts on the NPSI are not securities, ownership interests, or investment contracts. They are opened and closed against a published algorithm for entertainment and signal purposes only.
+  Trades on the NPSI are not securities, ownership interests, or investment contracts. They are opened and closed against a published algorithm.
 </Note>

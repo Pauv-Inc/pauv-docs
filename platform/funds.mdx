@@ -1,71 +1,40 @@
 ---
 title: Funds
-description: "How deposits, your on-platform balance, and withdrawals work on Pauv."
+description: "How deposits, your balance, and withdrawals work on Pauv."
 ---
 
-## Your On-Platform Balance
+## Your Balance
 
-Your **balance** is the dollar-denominated number you see in the app. It tracks the value you have available to open forecasts.
+Your **balance** is the dollar-denominated number you see in the app. It tracks the value you have available to trade.
 
 | Property | Detail |
 |----------|--------|
-| **Display** | Dollars ($). Deposits are credited at their U.S. dollar value |
-| **Funded by** | Crypto (any token, any network) or fiat (card / bank transfer) |
+| **Display** | U.S. dollars ($), credited 1:1 with your deposits |
+| **Funded by** | Glide |
 | **Transferable to other users?** | No |
-| **Withdrawable?** | Yes — as USDC on Solana to your connected wallet, or as a fiat payout |
+| **Withdrawable?** | Yes — automatically, at any time |
 
-## Payment Partners
-
-All funding runs through our payment gateway, **Soap Payments**:
-
-- **Glide** processes crypto deposits — any token, on any network.
-- **AptPay** processes fiat payments; fiat funds are held in a regulated **FBO custodial account**.
-- **Veriff** performs identity verification (KYC), required for all fiat deposits.
-
-## Connecting Your Wallet (Crypto)
-
-To deposit or withdraw crypto, connect a Solana wallet to your account:
-
-- **Browser extension** — Phantom, Solflare, Backpack, or any other Solana-compatible wallet.
-- **Mobile** — scan the QR code displayed in the app from your mobile wallet.
-
-Your wallet address is the address Pauv will send your crypto withdrawals to. Make sure the wallet you connect is one you control.
-
-## Depositing Crypto
+## Depositing
 
 <Steps>
-  <Step title="Open the deposit screen">
-    From your account, choose **Deposit** and select crypto. The app will display your Pauv deposit address.
+  <Step title="Choose Deposit">
+    From your account, choose **Deposit**.
   </Step>
-  <Step title="Send any token, on any network">
-    Send crypto to that address from your wallet. Deposits are processed through the Soap Payments gateway via **Glide**, which accepts any token on any network. No identity verification is required for crypto deposits.
-  </Step>
-  <Step title="Balance credited">
-    Once the deposit is confirmed on-chain, your on-platform balance is credited at the deposit's U.S. dollar value.
-  </Step>
-</Steps>
-
-## Depositing Fiat
-
-<Steps>
-  <Step title="Verify your identity">
-    All fiat deposits require identity verification (KYC), performed by **Veriff** through the Soap Payments gateway. You complete this once, before your first fiat deposit.
-  </Step>
-  <Step title="Deposit by card or bank">
-    From your account, choose **Deposit** and select a fiat method. Payments are processed by **AptPay**.
+  <Step title="Pay through Glide">
+    Complete your payment through **Glide**, our payment partner.
   </Step>
   <Step title="Balance credited">
-    Your funds are held in a regulated FBO custodial account and your on-platform balance is credited dollar-for-dollar.
+    Your balance is credited in U.S. dollars, 1:1 with your deposit.
   </Step>
 </Steps>
 
 ## Using Your Balance
 
-All forecasting on Pauv happens against your on-platform balance:
+All trading on Pauv happens against your balance:
 
-- **Open a forecast.** Commit a dollar amount to a public figure's NPSI as a Positive Forecast or an escrow-backed Negative Forecast.
-- **Close a forecast.** The curve calculates your proceeds and credits them back to your balance instantly.
-- **Instant settlement.** Because your balance is an on-platform record, forecasts open and close immediately without waiting on the chain.
+- **Open a position.** Commit a dollar amount to a public figure's NPSI — long (up) or escrow-backed short (down).
+- **Close a position.** The curve calculates your proceeds and credits them back to your balance instantly.
+- **Instant settlement.** Because your balance is an on-platform record, trades open and close immediately.
 
 ## Withdrawing
 
@@ -73,16 +42,9 @@ You can withdraw your balance at any time. Withdrawals are **automatic** — the
 
 <Steps>
   <Step title="Request a withdrawal">
-    From your account, choose **Withdraw**, enter the amount, and pick your payout method — USDC on Solana to your connected wallet, or a fiat payout via AptPay.
+    From your account, choose **Withdraw** and enter the amount.
   </Step>
   <Step title="Processed automatically">
-    Your withdrawal is processed immediately, with no manual review.
-  </Step>
-  <Step title="Funds arrive">
-    Arrival time depends on the payout method you selected.
+    Your withdrawal is processed automatically, with no manual review.
   </Step>
 </Steps>
-
-<Note>
-  Crypto withdrawals are sent only to the Solana wallet that is currently connected to your account. To withdraw to a different wallet, connect that wallet first.
-</Note>

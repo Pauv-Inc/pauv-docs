@@ -22,8 +22,9 @@
       {
         "group": "Platform",
         "pages": [
-          "platform/forecasting",
+          "platform/trading",
           "platform/funds",
+          "platform/referrals",
           "platform/for-talent"
         ]
       },
